@@ -1,0 +1,17 @@
+.main-content {
+	flex: 1 1 auto;
+	min-width: 0;
+	width: 100%;
+}
+
+.main-aside {
+	background-color: $color-800;
+	color: $white;
+	flex: 0 0 auto;
+	order: -1;
+	width: 224px;
+
+	a {
+		color: $white;
+	}
+}

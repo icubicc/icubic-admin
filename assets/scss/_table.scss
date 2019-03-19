@@ -1,0 +1,208 @@
+.table {
+
+	.th {
+		white-space: nowrap;
+
+		&.is-sortable {
+			cursor: pointer;
+
+			&:after {
+				content: "";
+				background-color: $color-text-lighter;
+				display: inline-block;
+				height: 20px;
+				mask-image: url(../images/symbols/icon-caret-down.svg);
+				mask-size: contain;
+				opacity: 0;
+				transition: all 0.2s ease-out;
+				vertical-align: bottom;
+				width: 20px;
+			}
+
+			&:hover,
+			&:focus {
+
+				&:after {
+					opacity: 1;
+				}
+			}
+		}
+
+		&.is-active {
+			color: $color-one-500;
+
+			&:after {
+				background-color: currentColor;
+				opacity: 1;
+			}
+		}
+
+		&.is-asc {
+
+			&:after {
+				mask-image: url(../images/symbols/icon-caret-up.svg);
+			}
+		}
+
+		&.is-desc {
+
+			&:after {
+				mask-image: url(../images/symbols/icon-caret-down.svg);
+			}
+		}
+	}
+
+	.center {
+		text-align: center;
+	}
+
+	.right {
+		text-align: right;
+	}
+
+	.expand {
+		width: 100%;
+	}
+
+	.link {
+
+		&.link-review {
+			color: $color-text-light;
+		}
+	}
+
+	.shrink {
+		text-align: right;
+		white-space: nowrap;
+		width: 1%;
+	}
+
+	.bar {
+		background-color: $color-alert-400;
+		display: block;
+		height: 16px;
+	}
+
+	.row {
+		align-items: center;
+		display: flex;
+
+		&:not(:last-child) {
+			margin-bottom: 4px;
+		}
+
+		.label {
+			flex: 1 1 0;
+			font-weight: 700;
+
+			.input {
+				width: 60px;
+			}
+		}
+
+		.input {
+			padding-bottom: 4px;
+			padding-top: 4px;
+			text-align: right;
+			width: 120px;
+		}
+	}
+
+	.small {
+		@include font-size-100;
+		color: $color-text-light;
+		display: block;
+	}
+
+	.positive {
+		color: $color-success-600;
+	}
+
+	.negative {
+		color: $color-alert-600;
+	}
+
+	.fail {
+		color: $color-text-light;
+	}
+
+	.action {
+		position: relative;
+	}
+
+	.more {
+		display: block;
+		padding-right: 18px;
+		position: relative;
+		text-align: right;
+
+		&:before {
+			content: "";
+			background-color: currentColor;
+			height: 100%;
+			mask-image: url(../images/symbols/icon-chevron-down.svg);
+			mask-repeat: no-repeat;
+			mask-position: right center;
+			mask-size: contain;
+			right: 0;
+			position: absolute;
+			top: 0;
+			width: 16px;
+		}
+	}
+}
+
+.table-responsive {
+	background: linear-gradient(to right, $white 25%, rgba($white, 0)),
+				linear-gradient(to right, rgba($white, 0), $white 75%) 100% 0,
+				radial-gradient(farthest-side at 0 50%, rgba($color-800, 0.2), rgba($color-800, 0)) 0 50%,
+				radial-gradient(farthest-side at 100% 50%, rgba($color-800, 0.2), rgba($color-800, 0)) 100% 50%;
+	background-attachment: local, local, scroll, scroll;
+	background-color: $white;
+	background-repeat: no-repeat;
+	background-size: 36px 100%, 36px 100%, 12px 100%, 12px 100%;
+	border: 1px solid $color-border;
+	overflow-x: auto;
+
+	.table {
+		background-color: transparent;
+		border: none;
+	}
+}
+
+.table-filter {
+	display: inline-block;
+	position: relative;
+
+	@at-root {
+		.table-filter-toggle {
+			color: $color-text-lighter;
+			transition: all 0.2s ease-out;
+
+			&.is-toggled {
+				color: $color-one-500;
+			}
+		}
+
+		.table-filter-list {
+			background-color: $white;
+			border: 1px solid $color-border;
+			box-shadow: $box-shadow-200;
+			display: none;
+			list-style: none;
+			margin: 4px 0 0;
+			padding: 4px;
+			position: absolute;
+			right: 0;
+			top: 100%;
+
+			.filter {
+
+				.label {
+					display: block;
+					padding: 4px 8px;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,191 @@
+<!-- @import variables -->
+<!-- $admin-toggle-items-investment: toggled -->
+<!-- $admin-nav-investment-list: link is-current -->
+<!-- @import header -->
+
+			<div id="site-content" class="site-content">
+				<div class="site-content-inner">
+					<div class="main-content" role="main">
+						<div class="admin-page-container">
+							<header class="admin-page-header">
+								<div class="page-breadcrumb">
+									<p class="breadcrumb"><span class="parent">Investment</span> / <span class="current">List of Investor</span></p>
+								</div>
+								<div class="avatar-nav">
+									<div class="avatar-nav-link">
+										<a href="#avatar-nav-menu" class="link js-toggle"><span class="initial">AD</span></a>
+									</div>
+									<div id="avatar-nav-menu" class="avatar-nav-menu">
+										<ul class="items">
+											<li class="item">
+												<a class="link" href="user-account.html">Account</a>
+											</li>
+											<li class="item">
+												<a class="link" href="user-login.html">Logout</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</header>
+							<div class="admin-page-content">
+								<section class="section">
+									<h1 class="page-title">List of Investor</h1>
+									<div class="admin-table">
+										<div class="admin-table-head">
+											<div class="admin-table-action">
+												<a href="investment-list-new.html" class="button button-green"><svg class="icon icon-inline" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-plus" /></svg> Add New</a>
+											</div>
+											<div class="admin-table-search">
+												<div class="search-bar">
+													<div class="search-bar-filter">
+														<a href="#input-search-filter" class="toggle js-toggle" data-toggle-area="#input-search-filter"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-search" /></svg></a>
+														<ul id="input-search-filter" class="items">
+															<li class="item">
+																<label class="label"><input type="checkbox" class="input" checked> Search All</label>
+															</li>
+															<li class="item">
+																<label class="label"><input type="checkbox" class="input"> ID</label>
+															</li>
+															<li class="item">
+																<label class="label"><input type="checkbox" class="input"> Name</label>
+															</li>
+															<li class="item">
+																<label class="label"><input type="checkbox" class="input"> Phone</label>
+															</li>
+															<li class="item">
+																<label class="label"><input type="checkbox" class="input"> Email</label>
+															</li>
+															<li class="item">
+																<label class="label"><input type="checkbox" class="input"> Location</label>
+															</li>
+														</ul>
+													</div>
+													<div class="search-bar-form">
+														<input type="text" class="input" placeholder="Keyword">
+														<button class="button button-gray">Search</button>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="admin-table-body">
+											<table class="table">
+												<thead>
+													<tr>
+														<th class="th is-sortable is-active is-asc">ID</th>
+														<th class="th is-sortable">Name</th>
+														<th class="th">Type</th>
+														<th class="th">Phone</th>
+														<th class="th">Email</th>
+														<th class="th">Location</th>
+														<th class="th"></th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td class="strong">#IN001</td>
+														<td>Budi</td>
+														<td>Individual</td>
+														<td>6221-12346780</td>
+														<td>budi@invi.co</td>
+														<td>Jakarta Barat</td>
+														<td class="action">
+															<a class="more js-toggle" href="#in001">Action</a>
+															<div id="in001" class="menu-popover">
+																<ul class="menu-popover-items">
+																	<li class="menu-popover-item">
+																		<a href="#" class="link">Edit</a>
+																	</li>
+																	<li class="menu-popover-item">
+																		<a href="#" class="link link-delete">Delete</a>
+																	</li>
+																</ul>
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td class="strong">#IN002</td>
+														<td>Sari</td>
+														<td>Individual</td>
+														<td>6221-12346780</td>
+														<td>sari@invi.co</td>
+														<td>Jakarta Utara</td>
+														<td class="action">
+															<a class="more js-toggle" href="#in002">Action</a>
+															<div id="in002" class="menu-popover">
+																<ul class="menu-popover-items">
+																	<li class="menu-popover-item">
+																		<a href="#" class="link">Edit</a>
+																	</li>
+																	<li class="menu-popover-item">
+																		<a href="#" class="link link-delete">Delete</a>
+																	</li>
+																</ul>
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td class="strong">#IN003</td>
+														<td>PT. Sentosa</td>
+														<td>Company</td>
+														<td>6221-12346780</td>
+														<td>sentosa@gmail.com</td>
+														<td>Jakarta Timur</td>
+														<td class="action">
+															<a class="more js-toggle" href="#in003">Action</a>
+															<div id="in003" class="menu-popover">
+																<ul class="menu-popover-items">
+																	<li class="menu-popover-item">
+																		<a href="#" class="link">Edit</a>
+																	</li>
+																	<li class="menu-popover-item">
+																		<a href="#" class="link link-delete">Delete</a>
+																	</li>
+																</ul>
+															</div>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<div class="admin-table-foot">
+											<div class="page-navigation">
+												<div class="page-navigation-record">
+													<p class="count"><span class="value">4</span> records</p>
+												</div>
+												<div class="page-navigation-list">
+													<p class="count"><span class="value">1043</span> pages</p>
+													<ul class="items">
+														<li class="item item-inactive">
+															<a class="link" href="#"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-chevron-double-left" /></svg></a>
+														</li>
+														<li class="item item-inactive">
+															<a class="link" href="#"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-chevron-left" /></svg></a>
+														</li>
+														<li class="item">
+															<input class="input" type="text" value="1">
+														</li>
+														<li class="item">
+															<a class="link" href="#"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-chevron-right" /></svg></a>
+														</li>
+														<li class="item">
+															<a class="link" href="#"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-chevron-double-right" /></svg></a>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+								</section>
+							</div>
+							<footer class="admin-page-footer">
+								<p class="attribution">Developed by <a href="http://icubic.co.id" class="link">ICUBIC</a></p>
+							</footer>
+						</div>
+					</div>
+
+					<!-- @import sidebar -->
+
+				</div>
+			</div>
+
+<!-- @import footer -->

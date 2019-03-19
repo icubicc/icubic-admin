@@ -1,0 +1,102 @@
+<!-- @import variables -->
+<!-- @import header -->
+
+			<div id="site-content" class="site-content">
+				<div class="site-content-inner">
+					<div class="main-content" role="main">
+						<div class="admin-page-container">
+							<header class="admin-page-header">
+								<div class="page-breadcrumb">
+									<p class="breadcrumb"><span class="parent">User</span> /  <span class="current">Account</span></p>
+								</div>
+								<div class="avatar-nav">
+									<div class="avatar-nav-link">
+										<a href="#avatar-nav-menu" class="link js-toggle"><span class="initial">AD</span></a>
+									</div>
+									<div id="avatar-nav-menu" class="avatar-nav-menu">
+										<ul class="items">
+											<li class="item">
+												<a class="link" href="user-account.html">Account</a>
+											</li>
+											<li class="item">
+												<a class="link" href="user-login.html">Logout</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</header>
+							<div class="admin-page-content">
+								<section class="section section-head">
+									<h1 class="page-title">Account</h1>
+								</section>
+								<section class="section">
+									<form>
+										<div class="form-input js-form-input">
+											<label for="input-name" class="form-input-heading">Nama</label>
+											<div class="form-input-field is-required">
+												<input type="text" id="input-name" class="input" value="Admin" placeholder="Enter your name">
+											</div>
+										</div>
+										<div class="form-input js-form-input">
+											<label for="input-login" class="form-input-heading">Login</label>
+											<div class="form-input-field is-required">
+												<input type="text" id="input-login" class="input" value="admin" placeholder="Enter your login">
+											</div>
+										</div>
+										<div class="form-input js-form-input">
+											<label for="input-email" class="form-input-heading">Email</label>
+											<div class="form-input-field is-required">
+												<input type="email" id="input-email" class="input" value="admin@dusdusan.com" placeholder="Enter your email">
+											</div>
+										</div>
+										<div class="form-input js-form-input">
+											<label for="input-role" class="form-input-heading">Role</label>
+											<div class="form-input-select form-input-field is-required">
+												<select name="input-role" id="input-role" class="input">
+													<option value="" disabled selected>Select role</option>
+													<option value="1">Super Admin</option>
+													<option value="2">Admin</option>
+													<option value="3">User</option>
+												</select>
+											</div>
+										</div>
+										<div class="form-input js-form-input">
+											<label for="input-phone" class="form-input-heading">Telepon</label>
+											<div class="form-input-phone form-input-field is-required">
+												<div class="inputs">
+													<input type="text" id="input-phone-area" class="input input-area" value="+62" placeholder="+62" readonly>
+													<input type="text" id="input-phone-number" class="input input-number" value="81234889900" placeholder="Enter your phone">
+												</div>
+											</div>
+										</div>
+										<div class="form-input js-form-input">
+											<label for="input-role" class="form-input-heading">Tanggal Lahir</label>
+											<div class="form-input-field is-required">
+												<input type="text" class="input" value="31/10/1980" placeholder="DD/MM/YYYY">
+											</div>
+										</div>
+										<!-- <div class="form-radio">
+											<p class="legend">Jenis Kelamin</p>
+											<div class="inputs">
+												<label class="label"><input type="radio" name="input-user-gender" id="input-user-gender-male" class="input" checked> Laki-laki</label>
+												<label class="label"><input type="radio" name="input-user-gender" id="input-user-gender-female" class="input"> Perempuan</label>
+											</div>
+										</div> -->
+										<div class="form-submit">
+											<button class="button">Save Settings</button>
+										</div>
+									</form>
+								</section>
+							</div>
+							<footer class="admin-page-footer">
+								<p class="attribution">Developed by <a href="http://icubic.co.id" class="link">ICUBIC</a></p>
+							</footer>
+						</div>
+					</div>
+
+					<!-- @import sidebar -->
+
+				</div>
+			</div>
+
+<!-- @import footer -->

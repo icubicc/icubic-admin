@@ -1,0 +1,274 @@
+<!-- @import variables -->
+<!-- $admin-toggle-items-accounting: toggled -->
+<!-- $admin-nav-accounting-home: link is-current -->
+<!-- @import header -->
+
+			<div id="site-content" class="site-content">
+				<div class="site-content-inner">
+					<div class="main-content" role="main">
+						<div class="admin-page-container">
+							<header class="admin-page-header">
+								<div class="page-breadcrumb">
+									<p class="breadcrumb"><span class="parent">Accounting</span> / <span class="current">Accounting Home</span></p>
+								</div>
+								<div class="avatar-nav">
+									<div class="avatar-nav-link">
+										<a href="#avatar-nav-menu" class="link js-toggle"><span class="initial">AD</span></a>
+									</div>
+									<div id="avatar-nav-menu" class="avatar-nav-menu">
+										<ul class="items">
+											<li class="item">
+												<a class="link" href="user-account.html">Account</a>
+											</li>
+											<li class="item">
+												<a class="link" href="user-login.html">Logout</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</header>
+							<div class="admin-page-content">
+								<section class="section section-break">
+									<div class="form-horizontal">
+										<div class="form-horizontal-item">
+											<div class="form-input js-form-input">
+												<label for="input-ap-month" class="form-input-heading">Bulan Faktur</label>
+												<div class="form-input-select form-input-field">
+													<select name="input-ap-month" id="input-ap-month" class="input">
+														<option>Semua</option>
+													</select>
+												</div>
+											</div>
+										</div>
+										<div class="form-horizontal-item">
+											<div class="form-input js-form-input">
+												<label for="input-ap-date" class="form-input-heading">Tanggal Faktur</label>
+												<div class="form-input-date form-input-field">
+													<input type="text" id="input-ap-date" class="input" placeholder="Pilih Tanggal">
+												</div>
+											</div>
+										</div>
+										<div class="form-horizontal-item">
+											<div class="form-input js-form-input">
+												<label for="input-ap-date-receive" class="form-input-heading">Tanggal Terima Faktur</label>
+												<div class="form-input-date form-input-field">
+													<input type="text" id="input-ap-date-receive" class="input" placeholder="Pilih Tanggal">
+												</div>
+											</div>
+										</div>
+										<div class="form-horizontal-item">
+											<div class="form-input js-form-input">
+												<label for="input-ap-date-expire" class="form-input-heading">Tanggal Jatuh Tempo</label>
+												<div class="form-input-date form-input-field">
+													<input type="text" id="input-ap-date-expire" class="input" placeholder="Pilih Tanggal">
+												</div>
+											</div>
+										</div>
+										<div class="form-horizontal-item">
+											<div class="form-input js-form-input">
+												<label for="input-ap-vendor" class="form-input-heading">Vendor</label>
+												<div class="form-input-select form-input-field">
+													<select name="input-ap-vendor" id="input-ap-vendor" class="input js-choice">
+														<option>Semua</option>
+														<option>PT Homeco Victoria Makmur</option>
+														<option>PT Supra Teratai Metal</option>
+														<option>PT Trisinar Indopratama</option>
+													</select>
+												</div>
+											</div>
+										</div>
+										<div class="form-horizontal-item">
+											<div class="form-input js-form-input">
+												<label for="input-ap-status" class="form-input-heading">Status Pembayaran</label>
+												<div class="form-input-select form-input-field">
+													<select name="input-ap-status" id="input-ap-status" class="input">
+														<option>Semua</option>
+													</select>
+												</div>
+											</div>
+										</div>
+									</div>
+								</section>
+								<section class="section">
+									<div class="stat-grid">
+										<div class="stat-grid-items">
+											<div class="stat-grid-item">
+												<div class="stat-grid-meta">
+													<p class="row label">Total Hutang</p>
+													<p class="row value">Rp 4.876.781.000</p>
+												</div>
+											</div>
+											<div class="stat-grid-item">
+												<div class="stat-grid-meta">
+													<p class="row label">Total Hutang Telah Dibayar</p>
+													<p class="row value">Rp 1.455.966.950</p>
+												</div>
+											</div>
+											<div class="stat-grid-item">
+												<div class="stat-grid-meta">
+													<p class="row label">Total Hutang Belum Dibayar</p>
+													<p class="row value">Rp 3.420.814.050</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</section>
+								<section class="section">
+									<div class="tab-area">
+										<div class="tab-area-nav">
+											<a href="#tab-ap-paid" class="link js-tab-link" data-tab-group="accounting-home">Account Payable - Sudah Terbayar</a>
+											<a href="#tab-ap-unpaid" class="link js-tab-link" data-tab-group="accounting-home">Account Payable - Belum Terbayar</a>
+										</div>
+										<div class="tab-area-items">
+											<div id="tab-ap-paid" class="tab-area-item js-tab-target" data-tab-group="accounting-home">
+												<div class="admin-table">
+													<div class="admin-table-head">
+														<div class="admin-table-legend">
+															<h2 class="heading">Account Payable - Sudah Terbayar</h2>
+														</div>
+													</div>
+													<div class="admin-table-body">
+														<table class="table">
+															<thead>
+																<tr>
+																	<th class="th">No</th>
+																	<th class="th">Vendor</th>
+																	<th class="th">Kategori</th>
+																	<th class="th">Total Payment</th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr>
+																	<td>1</td>
+																	<td>PT Trisinar Indopratama</td>
+																	<td>Pembelian TSI</td>
+																	<td>450.000.000</td>
+																</tr>
+																<tr>
+																	<td>2</td>
+																	<td>PT Homeco Victoria Makmur</td>
+																	<td>Pembelian Medina</td>
+																	<td>393.496.825</td>
+																</tr>
+																<tr>
+																	<td>3</td>
+																	<td>PT Supra Teratai Metal</td>
+																	<td>Pembelian Supra</td>
+																	<td>371.238.516</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+													<div class="admin-table-foot">
+														<div class="page-navigation">
+															<div class="page-navigation-record">
+																<p class="count"><span class="value">4</span> records</p>
+															</div>
+															<div class="page-navigation-list">
+																<p class="count"><span class="value">1043</span> pages</p>
+																<ul class="items">
+																	<li class="item item-inactive">
+																		<a class="link" href="#"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-chevron-double-left" /></svg></a>
+																	</li>
+																	<li class="item item-inactive">
+																		<a class="link" href="#"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-chevron-left" /></svg></a>
+																	</li>
+																	<li class="item">
+																		<input class="input" type="text" value="1">
+																	</li>
+																	<li class="item">
+																		<a class="link" href="#"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-chevron-right" /></svg></a>
+																	</li>
+																	<li class="item">
+																		<a class="link" href="#"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-chevron-double-right" /></svg></a>
+																	</li>
+																</ul>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div id="tab-ap-unpaid" class="tab-area-item js-tab-target" data-tab-group="accounting-home">
+												<div class="admin-table">
+													<div class="admin-table-head">
+														<div class="admin-table-legend">
+															<h2 class="heading">Account Payable - Belum Terbayar</h2>
+														</div>
+													</div>
+													<div class="admin-table-body">
+														<table class="table">
+															<thead>
+																<tr>
+																	<th class="th">No</th>
+																	<th class="th">Vendor</th>
+																	<th class="th">Kategori</th>
+																	<th class="th">Total Outstanding</th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr>
+																	<td>1</td>
+																	<td>PT Trisinar Indopratama</td>
+																	<td>Jasa Ongkir Pembelian DDC</td>
+																	<td>266.247.729</td>
+																</tr>
+																<tr>
+																	<td>2</td>
+																	<td>PT Homeco Victoria Makmur</td>
+																	<td>Jasa Ongkir Pembelian DDC</td>
+																	<td>393.496.825</td>
+																</tr>
+																<tr>
+																	<td>3</td>
+																	<td>PT Supra Teratai Metal</td>
+																	<td>Jasa Ongkir Pembelian DDC</td>
+																	<td>371.238.516</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+													<div class="admin-table-foot">
+														<div class="page-navigation">
+															<div class="page-navigation-record">
+																<p class="count"><span class="value">4</span> records</p>
+															</div>
+															<div class="page-navigation-list">
+																<p class="count"><span class="value">1043</span> pages</p>
+																<ul class="items">
+																	<li class="item item-inactive">
+																		<a class="link" href="#"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-chevron-double-left" /></svg></a>
+																	</li>
+																	<li class="item item-inactive">
+																		<a class="link" href="#"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-chevron-left" /></svg></a>
+																	</li>
+																	<li class="item">
+																		<input class="input" type="text" value="1">
+																	</li>
+																	<li class="item">
+																		<a class="link" href="#"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-chevron-right" /></svg></a>
+																	</li>
+																	<li class="item">
+																		<a class="link" href="#"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-chevron-double-right" /></svg></a>
+																	</li>
+																</ul>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</section>
+							</div>
+							<footer class="admin-page-footer">
+								<p class="attribution">Developed by <a href="http://icubic.co.id" class="link">ICUBIC</a></p>
+							</footer>
+						</div>
+					</div>
+
+					<!-- @import sidebar -->
+
+				</div>
+			</div>
+
+<!-- @import footer -->

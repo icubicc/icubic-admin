@@ -1,0 +1,61 @@
+/*!
+Theme Name: Jangkau Admin
+Theme URI: https://github.com/bennyjien/gulper
+Author: Benny Jien
+Author URI: http://bennyjien.com/
+Description: This site is infected with Gulper. Switching to another theme is not recommended since this theme is definitely more awesome.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: responsive-layout, mobile-first
+*/
+
+// variables
+@import "variables";
+@import "mixins";
+@import "fontface";
+@import "keyframes";
+
+// plugins
+@import "plugins/normalize";
+@import "plugins/choices";
+@import "plugins/dragula";
+@import "plugins/fine-uploader";
+// @import "plugins/flickity";
+// @import "plugins/flickity-custom";
+@import "plugins/magnific-popup";
+@import "plugins/pikaday";
+@import "plugins/stickyfill";
+
+// globals
+@import "reset";
+@import "global";
+@import "modifier";
+
+// containers
+@import "site";
+@import "main";
+
+// modules
+@import "admin";
+@import "avatar";
+@import "card";
+@import "form";
+@import "menu";
+@import "page";
+@import "popup";
+@import "proposal";
+@import "purchase";
+@import "search";
+@import "stat";
+@import "tab";
+@import "table";
+@import "toggle";
+@import "user";
+
+// theme
+@import "transaction";
+
+// media
+@import "mobile";
+@media print { @import "print"; }

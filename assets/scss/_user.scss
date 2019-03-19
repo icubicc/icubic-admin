@@ -1,0 +1,60 @@
+.user-gateway-container {
+	background-color: $color-800;
+	color: $white;
+	height: 100%;
+
+	@at-root {
+		.user-gateway-content {
+			padding-bottom: 48px;
+			padding-top: 48px;
+		}
+	}
+}
+
+.user-login {
+	margin: 0 auto;
+	max-width: 480px;
+
+	@at-root {
+		.user-login-head {
+			margin-bottom: 24px;
+
+			.identity {
+				text-align: center;
+			}
+
+			.logo {
+				width: 256px;
+			}
+		}
+
+		.user-login-body {
+			background-color: $white;
+			border-radius: 3px;
+			color: $color-text;
+			padding: 48px;
+
+			.heading {
+				font-weight: 300;
+				margin-bottom: 40px;
+				text-align: center;
+			}
+
+			.forgot {
+				margin-top: 16px;
+				text-align: center;
+			}
+		}
+
+		.user-login-foot {
+			@include font-size-400;
+			margin-top: 16px;
+			text-align: center;
+
+			.link {
+				color: $white;
+				text-decoration: underline;
+			}
+		}
+	}
+}

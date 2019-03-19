@@ -1,0 +1,29 @@
+.transaction-proof {
+	display: flex;
+
+	@at-root {
+		.transaction-proof-photo {
+			flex: 0 0 50%;
+			margin-right: 24px;
+			max-width: 320px;
+		}
+
+		.transaction-proof-detail {
+
+			.line {
+
+				&:not(:last-child) {
+					margin-bottom: 8px;
+				}
+			}
+
+			.label {
+				font-weight: 700;
+			}
+
+			.value {
+				display: block;
+			}
+		}
+	}
+}

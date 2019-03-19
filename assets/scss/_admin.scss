@@ -1,0 +1,235 @@
+.admin-page-container {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+
+	@at-root {
+		.admin-page-header {
+			align-items: center;
+			background-color: $white;
+			box-shadow: $box-shadow-300;
+			display: flex;
+			justify-content: space-between;
+			padding: 12px 48px;
+			position: sticky;
+			top: 0;
+			z-index: 2;
+
+			.section {
+				flex: 0 1 auto;
+
+				&.section-large {
+					flex: 1 1 0;
+				}
+			}
+		}
+
+		.admin-page-content {
+			flex: 1 1 0;
+			padding: 48px;
+
+			.section {
+				margin-bottom: 48px;
+
+				&.section-head {
+					margin-bottom: 32px;
+				}
+
+				&.section-break {
+					border-bottom: 1px solid $color-border;
+					margin-bottom: 32px;
+					padding-bottom: 32px;
+				}
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+
+		.admin-page-footer {
+			border-top: 1px solid $color-border;
+			padding: 12px 48px;
+
+			.attribution {
+				@include font-size-200;
+				color: $color-text-light;
+				text-align: right;
+			}
+
+			.link {
+				color: $color-text-light;
+				font-weight: 700;
+			}
+		}
+	}
+}
+
+.admin-sidebar {
+	position: sticky;
+	top: 0;
+
+	@at-root {
+		.admin-sidebar-logo {
+			padding: 24px;
+		}
+
+		.admin-sidebar-nav {
+			padding: 24px 0;
+		}
+	}
+}
+
+.admin-table {
+
+	@at-root {
+		.admin-table-head {
+			align-items: center;
+			display: flex;
+			justify-content: space-between;
+			margin-bottom: 24px;
+		}
+
+		.admin-table-legend {
+
+			.heading {
+				@include font-size-h3;
+				font-weight: 400;
+			}
+		}
+
+		.admin-table-search {
+			flex: 0 1 50%;
+			margin-left: auto;
+			max-width: 400px;
+		}
+
+		.admin-table-summary {
+			margin-bottom: 16px;
+
+			.heading {
+				@include font-size-h3;
+				margin-bottom: 4px;
+			}
+		}
+
+		.admin-table-foot {
+			margin-top: 24px;
+		}
+	}
+}
+
+.admin-nav {
+
+	@at-root {
+		.admin-nav-items {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+
+			&.admin-nav-items-child {
+				display: none;
+			}
+		}
+
+		.admin-nav-item {
+
+			&:not(.admin-nav-item-child) {
+
+				&:not(:last-child) {
+					border-bottom: 1px solid rgba($white, 0.12);
+					margin-bottom: 12px;
+					padding-bottom: 12px;
+				}
+			}
+
+			.heading {
+				@include font-size-300;
+				color: rgba($white, 0.4);
+				cursor: pointer;
+				font-weight: 400;
+				letter-spacing: 0.08em;
+				margin-bottom: 0;
+				padding: 8px 24px;
+				position: relative;
+				text-transform: uppercase;
+
+				&:before {
+					content: "";
+					background-color: rgba($white, 0.32);
+					height: 100%;
+					mask-image: url(../images/symbols/icon-chevron-down.svg);
+					mask-repeat: no-repeat;
+					mask-position: right center;
+					mask-size: contain;
+					right: 18px;
+					position: absolute;
+					top: 0;
+					width: 20px;
+				}
+
+				&.is-toggled {
+
+					&:before {
+						mask-image: url(../images/symbols/icon-chevron-up.svg);
+					}
+				}
+			}
+
+			.link {
+				// @include font-size-400;
+				display: block;
+				padding: 8px 24px;
+				transition: all 0.2s ease-out;
+
+				&:hover,
+				&:focus {
+					background-color: rgba($black, 0.2);
+					text-decoration: none;
+				}
+
+				&.is-current {
+					background-color: rgba($white, 0.12);
+					font-weight: 700;
+				}
+			}
+		}
+	}
+}
+
+.admin-switcher {
+
+	@at-root {
+		.admin-switcher-options {
+			background: $color-200;
+			border-radius: 4px;
+			display: flex;
+			overflow: hidden;
+		}
+
+		.admin-switcher-option {
+			flex: 1 1 50%;
+
+			.input {
+				display: none;
+
+				&:checked {
+
+					+ .label {
+						background-color: $color-one-500;
+						color: $white;
+					}
+				}
+			}
+
+			.label {
+				@include font-size-400;
+				color: $color-text-light;
+				display: block;
+				min-width: 40px;
+				padding: 4px 8px;
+				text-align: center;
+			}
+		}
+	}
+}
