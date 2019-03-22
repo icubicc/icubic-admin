@@ -1,6 +1,6 @@
 /*!
-Theme Name: Jangkau Admin
-Theme URI: https://github.com/bennyjien/gulper
+Theme Name: ICUBIC Admin
+Theme URI: https://github.com/icubicc/icubic-admin
 Author: Benny Jien
 Author URI: http://bennyjien.com/
 Description: This site is infected with Gulper. Switching to another theme is not recommended since this theme is definitely more awesome.
@@ -36,25 +36,17 @@ Tags: responsive-layout, mobile-first
 @import "site";
 @import "main";
 
-// modules
+// components & layouts
 @import "admin";
-@import "avatar";
-@import "card";
 @import "form";
-@import "menu";
 @import "page";
 @import "popup";
-@import "proposal";
-@import "purchase";
 @import "search";
 @import "stat";
-@import "tab";
 @import "table";
-@import "toggle";
-@import "user";
 
 // theme
-@import "transaction";
+@import "user";
 
 // media
 @import "mobile";

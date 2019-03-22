@@ -17,14 +17,16 @@
 
 	@at-root {
 		.user-login-head {
-			margin-bottom: 24px;
+			margin-bottom: 32px;
+			text-align: center;
 
 			.identity {
 				text-align: center;
 			}
 
 			.logo {
-				width: 256px;
+				max-height: 48px;
+				max-width: 192px;
 			}
 		}
 
@@ -33,17 +35,21 @@
 			border-radius: 3px;
 			color: $color-text;
 			padding: 48px;
+		}
 
-			.heading {
-				font-weight: 300;
-				margin-bottom: 40px;
-				text-align: center;
-			}
+		.user-login-title {
+			font-weight: 300;
+			margin-bottom: 40px;
+			text-align: center;
+		}
 
-			.forgot {
-				margin-top: 16px;
-				text-align: center;
-			}
+		.user-login-notification {
+			margin-bottom: 32px;
+		}
+
+		.user-login-forgot {
+			margin-top: 16px;
+			text-align: center;
 		}
 
 		.user-login-foot {

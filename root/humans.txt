@@ -3,11 +3,11 @@
 
 # TEAM
 
-	Benny Jien -- Designer -- @bennyjien
+	Benny Jien -- Designer / Front End Designer -- @bennyjien
 
 
 # TECHNOLOGY COLOPHON
 
-	HTML5, CSS3, JavaScript ES5
+	HTML5, CSS3, JavaScript ES6
 	SASS, Autoprefixer
-	Modernizr, jQuery
+	Modernizr

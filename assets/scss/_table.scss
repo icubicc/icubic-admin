@@ -1,200 +1,70 @@
-.table {
+.table-general {
 
-	.th {
-		white-space: nowrap;
+	&.table-general-responsive {
+		background: linear-gradient(to right, $white 25%, rgba($white, 0)),
+					linear-gradient(to right, rgba($white, 0), $white 75%) 100% 0,
+					radial-gradient(farthest-side at 0 50%, rgba($color-800, 0.2), rgba($color-800, 0)) 0 50%,
+					radial-gradient(farthest-side at 100% 50%, rgba($color-800, 0.2), rgba($color-800, 0)) 100% 50%;
+		background-attachment: local, local, scroll, scroll;
+		background-color: $white;
+		background-repeat: no-repeat;
+		background-size: 36px 100%, 36px 100%, 12px 100%, 12px 100%;
+		border-radius: 4px;
+		box-shadow: inset 0 0 0 2px $color-border;
+		overflow-x: auto;
 
-		&.is-sortable {
-			cursor: pointer;
-
-			&:after {
-				content: "";
-				background-color: $color-text-lighter;
-				display: inline-block;
-				height: 20px;
-				mask-image: url(../images/symbols/icon-caret-down.svg);
-				mask-size: contain;
-				opacity: 0;
-				transition: all 0.2s ease-out;
-				vertical-align: bottom;
-				width: 20px;
-			}
-
-			&:hover,
-			&:focus {
-
-				&:after {
-					opacity: 1;
-				}
-			}
-		}
-
-		&.is-active {
-			color: $color-one-500;
-
-			&:after {
-				background-color: currentColor;
-				opacity: 1;
-			}
-		}
-
-		&.is-asc {
-
-			&:after {
-				mask-image: url(../images/symbols/icon-caret-up.svg);
-			}
-		}
-
-		&.is-desc {
-
-			&:after {
-				mask-image: url(../images/symbols/icon-caret-down.svg);
-			}
+		.table {
+			background-color: transparent;
+			border: none;
 		}
 	}
-
-	.center {
-		text-align: center;
-	}
-
-	.right {
-		text-align: right;
-	}
-
-	.expand {
-		width: 100%;
-	}
-
-	.link {
-
-		&.link-review {
-			color: $color-text-light;
-		}
-	}
-
-	.shrink {
-		text-align: right;
-		white-space: nowrap;
-		width: 1%;
-	}
-
-	.bar {
-		background-color: $color-alert-400;
-		display: block;
-		height: 16px;
-	}
-
-	.row {
-		align-items: center;
-		display: flex;
-
-		&:not(:last-child) {
-			margin-bottom: 4px;
-		}
-
-		.label {
-			flex: 1 1 0;
-			font-weight: 700;
-
-			.input {
-				width: 60px;
-			}
-		}
-
-		.input {
-			padding-bottom: 4px;
-			padding-top: 4px;
-			text-align: right;
-			width: 120px;
-		}
-	}
-
-	.small {
-		@include font-size-100;
-		color: $color-text-light;
-		display: block;
-	}
-
-	.positive {
-		color: $color-success-600;
-	}
-
-	.negative {
-		color: $color-alert-600;
-	}
-
-	.fail {
-		color: $color-text-light;
-	}
-
-	.action {
-		position: relative;
-	}
-
-	.more {
-		display: block;
-		padding-right: 18px;
-		position: relative;
-		text-align: right;
-
-		&:before {
-			content: "";
-			background-color: currentColor;
-			height: 100%;
-			mask-image: url(../images/symbols/icon-chevron-down.svg);
-			mask-repeat: no-repeat;
-			mask-position: right center;
-			mask-size: contain;
-			right: 0;
-			position: absolute;
-			top: 0;
-			width: 16px;
-		}
-	}
-}
-
-.table-responsive {
-	background: linear-gradient(to right, $white 25%, rgba($white, 0)),
-				linear-gradient(to right, rgba($white, 0), $white 75%) 100% 0,
-				radial-gradient(farthest-side at 0 50%, rgba($color-800, 0.2), rgba($color-800, 0)) 0 50%,
-				radial-gradient(farthest-side at 100% 50%, rgba($color-800, 0.2), rgba($color-800, 0)) 100% 50%;
-	background-attachment: local, local, scroll, scroll;
-	background-color: $white;
-	background-repeat: no-repeat;
-	background-size: 36px 100%, 36px 100%, 12px 100%, 12px 100%;
-	border: 1px solid $color-border;
-	overflow-x: auto;
-
-	.table {
-		background-color: transparent;
-		border: none;
-	}
-}
-
-.table-filter {
-	display: inline-block;
-	position: relative;
 
 	@at-root {
-		.table-filter-toggle {
-			color: $color-text-lighter;
-			transition: all 0.2s ease-out;
+		.table-general-head {
+			align-items: center;
+			display: flex;
+			justify-content: space-between;
+			margin-bottom: 24px;
+		}
 
-			&.is-toggled {
-				color: $color-one-500;
+		.table-general-legend {
+
+			.heading {
+				@include font-size-h3;
+				font-weight: 400;
 			}
 		}
 
-		.table-filter-list {
-			background-color: $white;
-			border: 1px solid $color-border;
-			box-shadow: $box-shadow-200;
-			display: none;
-			list-style: none;
-			margin: 4px 0 0;
-			padding: 4px;
-			position: absolute;
-			right: 0;
-			top: 100%;
+		.table-general-search {
+			flex: 0 1 50%;
+			margin-left: auto;
+			max-width: 400px;
+		}
+
+		.table-general-filter {
+			display: inline-block;
+
+			.toggle {
+				color: $color-text-lighter;
+				transition: all 0.2s ease-out;
+
+				&.is-toggled {
+					color: $color-one-500;
+				}
+			}
+
+			.filters {
+				background-color: $white;
+				border: 1px solid $color-border;
+				box-shadow: $box-shadow-200;
+				display: none;
+				list-style: none;
+				margin: 4px 0 0;
+				padding: 4px;
+				position: absolute;
+				left: 0;
+				top: 100%;
+			}
 
 			.filter {
 
@@ -203,6 +73,245 @@
 					padding: 4px 8px;
 				}
 			}
+		}
+
+		.table-general-body {
+
+			.table {
+
+				.th {
+					position: relative;
+					white-space: nowrap;
+
+					&.is-sortable {
+						cursor: pointer;
+
+						&:after {
+							content: "";
+							background-color: $color-text-lighter;
+							display: inline-block;
+							height: 20px;
+							mask-image: url(../images/symbols/icon-caret-down.svg);
+							mask-size: contain;
+							opacity: 0;
+							transition: all 0.2s ease-out;
+							vertical-align: bottom;
+							width: 20px;
+						}
+
+						&:hover,
+						&:focus {
+
+							&:after {
+								opacity: 1;
+							}
+						}
+					}
+
+					&.is-active {
+						color: $color-one-500;
+
+						&:after {
+							background-color: currentColor;
+							opacity: 1;
+						}
+					}
+
+					&.is-asc {
+
+						&:after {
+							mask-image: url(../images/symbols/icon-caret-up.svg);
+						}
+					}
+
+					&.is-desc {
+
+						&:after {
+							mask-image: url(../images/symbols/icon-caret-down.svg);
+						}
+					}
+				}
+
+				.center {
+					text-align: center;
+				}
+
+				.right {
+					text-align: right;
+				}
+
+				.expand {
+					width: 100%;
+				}
+
+				.link {
+
+					&.link-review {
+						color: $color-text-light;
+					}
+				}
+
+				.shrink {
+					text-align: right;
+					white-space: nowrap;
+					width: 1%;
+				}
+
+				.bar {
+					background-color: $color-alert-400;
+					display: block;
+					height: 16px;
+				}
+
+				.row {
+					align-items: center;
+					display: flex;
+
+					&:not(:last-child) {
+						margin-bottom: 4px;
+					}
+
+					.label {
+						flex: 1 1 0;
+						font-weight: 700;
+
+						.input {
+							width: 60px;
+						}
+					}
+
+					.input {
+						padding-bottom: 4px;
+						padding-top: 4px;
+						text-align: right;
+						width: 120px;
+					}
+				}
+
+				.small {
+					@include font-size-100;
+					color: $color-text-light;
+					display: block;
+				}
+
+				.positive {
+					color: $color-success-600;
+				}
+
+				.negative {
+					color: $color-alert-600;
+				}
+
+				.fail {
+					color: $color-text-light;
+				}
+
+				.action {
+					position: relative;
+				}
+
+				.more {
+					display: block;
+					padding-right: 18px;
+					position: relative;
+					text-align: right;
+
+					&:before {
+						content: "";
+						background-color: currentColor;
+						height: 100%;
+						mask-image: url(../images/symbols/icon-chevron-down.svg);
+						mask-repeat: no-repeat;
+						mask-position: right center;
+						mask-size: contain;
+						right: 0;
+						position: absolute;
+						top: 0;
+						width: 16px;
+					}
+				}
+			}
+		}
+
+		.table-general-menu {
+			background-color: $white;
+			border: 1px solid $color-border-light;
+			border-radius: 6px;
+			box-shadow: $box-shadow-300;
+			display: none;
+			margin-right: -8px;
+			margin-top: -12px;
+			min-width: 160px;
+			position: absolute;
+			right: 0;
+			top: 100%;
+			z-index: 2;
+
+			&:before {
+				content: "";
+				border-bottom: 9px solid $color-border-light;
+				border-right: 9px solid transparent;
+				border-left: 9px solid transparent;
+				position: absolute;
+				right: 14px;
+				top: -9px;
+			}
+
+			&:after {
+				content: "";
+				border-bottom: 7px solid $white;
+				border-right: 7px solid transparent;
+				border-left: 7px solid transparent;
+				position: absolute;
+				right: 16px;
+				top: -7px;
+			}
+
+			.items {
+				list-style: none;
+				margin: 0;
+				padding: 8px 0;
+			}
+
+			.item {
+				padding: 0 4px;
+
+				&.item-line {
+					border-top: 1px solid $color-border-light;
+					margin-top: 4px;
+					padding-top: 4px;
+				}
+
+				.link {
+					color: $color-text;
+					display: block;
+					padding: 8px;
+					text-align: center;
+
+					&.link-delete {
+						color: $color-alert-500;
+
+						&:hover,
+						&:focus {
+							color: $color-alert-600;
+						}
+					}
+
+					&.link-disable {
+						color: $color-text-lighter;
+						pointer-events: none;
+					}
+
+					&:hover,
+					&:focus {
+						color: $color-one-500;
+					}
+				}
+			}
+		}
+
+		.table-general-foot {
+			margin-top: 24px;
 		}
 	}
 }

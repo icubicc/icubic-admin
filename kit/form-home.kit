@@ -1,0 +1,335 @@
+<!-- @import variables -->
+<!-- $admin-toggle-items-form: toggled -->
+<!-- $admin-nav-form-home: link is-current -->
+<!-- @import header -->
+
+			<div id="site-content" class="site-content">
+				<div class="site-content-inner">
+					<main class="main-content" role="main">
+						<div class="admin-page-container">
+							<header class="admin-page-header">
+								<section class="section section-large">
+									<div class="admin-breadcrumb">
+										<p class="breadcrumb"><span class="parent">Form</span> /  <span class="current">Form Components</span></p>
+									</div>
+								</section>
+								<section class="section">
+									<div class="admin-switcher">
+										<div class="admin-switcher-options">
+											<div class="admin-switcher-option">
+												<input type="radio" name="input-admin-language" id="input-admin-language-en" class="input" checked>
+												<label for="input-admin-language-en" class="label">EN</label>
+											</div>
+											<div class="admin-switcher-option">
+												<input type="radio" name="input-admin-language" id="input-admin-language-id" class="input">
+												<label for="input-admin-language-id" class="label">ID</label>
+											</div>
+										</div>
+									</div>
+								</section>
+								<section class="section">
+									<div class="admin-avatar">
+										<div class="admin-avatar-link">
+											<a href="#admin-avatar-menu" class="link js-toggle"><span class="initial">AD</span></a>
+										</div>
+										<div id="admin-avatar-menu" class="admin-avatar-menu">
+											<ul class="items">
+												<li class="item">
+													<a class="link" href="#">Account</a>
+												</li>
+												<li class="item">
+													<a class="link" href="#">Logout</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</section>
+							</header>
+							<div class="admin-page-content">
+								<section class="section section-break">
+									<h2>Form Input</h2>
+									<h3>Form Input Text</h3>
+									<div class="form-input js-form-input">
+										<p class="form-input-heading">Nama Anda <span class="small">Beritahu nama Anda. Yang sebenarnya.</span></p>
+										<div class="form-input-field is-required">
+											<input type="text" id="input-name" class="input" value="" placeholder="Masukkan Nama Lengkap" required>
+										</div>
+										<p class="form-input-caption">Usahakan nama unik agar terdengar unik.</p>
+									</div>
+									<h3>Form Input Text (invalid)</h3>
+									<div class="form-input js-form-input">
+										<p class="form-input-heading">Nama Anda <span class="small">Beritahu nama Anda. Yang sebenarnya.</span></p>
+										<div class="form-input-field is-required is-invalid">
+											<input type="text" id="input-name" class="input" value="" placeholder="Masukkan Nama Lengkap" required>
+										</div>
+										<p class="form-input-caption"><span class="alert">Nama Anda harus diisi.</span> Usahakan nama unik agar terdengar unik.</p>
+									</div>
+									<h3>Form Input Text with persistant placeholder</h3>
+									<div class="form-input js-form-input">
+										<p class="form-input-heading">Nama Anda <span class="small">Beritahu nama Anda. Yang sebenarnya.</span></p>
+										<div class="form-input-field is-required">
+											<p class="placeholder">Nama Lengkap harus diisi</p>
+											<input type="text" id="input-name" class="input" value="" required>
+										</div>
+										<p class="form-input-caption">Usahakan nama unik agar terdengar unik.</p>
+									</div>
+									<h3>Form Input Text with multiple inputs</h3>
+									<div class="form-input js-form-input">
+										<label for="input-product-dimension" class="form-input-heading">Dimension (L&times;W&times;H in cm)</label>
+										<div class="form-input-fields">
+											<div class="form-input-field">
+												<input type="text" id="input-product-dimension-length" class="input" placeholder="Length">
+											</div>
+											<div class="form-input-field">
+												<input type="text" id="input-product-dimension-width" class="input" placeholder="Width">
+											</div>
+											<div class="form-input-field">
+												<input type="text" id="input-product-dimension-height" class="input" placeholder="Height">
+											</div>
+										</div>
+									</div>
+									<h3>Form Input Text with inline multiple inputs</h3>
+									<div class="form-input js-form-input">
+										<label for="input-product-dimension" class="form-input-heading">Dimension (L&times;W&times;H in cm)</label>
+										<div class="form-input-fields form-input-fields-inline">
+											<div class="form-input-field">
+												<input type="text" id="input-product-dimension-length" class="input" placeholder="Length">
+											</div>
+											<div class="form-input-field">
+												<input type="text" id="input-product-dimension-width" class="input" placeholder="Width">
+											</div>
+											<div class="form-input-field">
+												<input type="text" id="input-product-dimension-height" class="input" placeholder="Height">
+											</div>
+										</div>
+									</div>
+									<h3>Form Input Date</h3>
+									<div class="form-input js-form-input">
+										<label for="input-investor-birth-date" class="form-input-heading">Date of Birth</label>
+										<div class="form-input-date form-input-field">
+											<input type="text" id="input-investor-birth-date" class="input">
+										</div>
+									</div>
+									<h3>Form Input Radio with inline inputs</h3>
+									<div class="form-input js-form-input">
+										<label for="input-investor-type" class="form-input-heading">Investor Type</label>
+										<div class="form-input-fields form-input-fields-inline">
+											<div class="form-input-radio form-input-field">
+												<input type="radio" id="input-investor-type-company" class="input" name="input-investor-type">
+												<label for="input-investor-type-company" class="label">Company</label>
+											</div>
+											<div class="form-input-radio form-input-field">
+												<input type="radio" id="input-investor-type-individual" class="input" name="input-investor-type">
+												<label for="input-investor-type-individual" class="label">Individual</label>
+											</div>
+										</div>
+									</div>
+									<h3>Form Input Search</h3>
+									<div class="form-input js-form-input">
+										<label for="input-search" class="form-input-heading">Search</label>
+										<div class="form-input-search form-input-field">
+											<input type="text" id="input-search" class="input" placeholder="Keyword(s)">
+										</div>
+									</div>
+									<h3>Form Input Select</h3>
+									<div class="form-input js-form-input">
+										<label for="input-select" class="form-input-heading">City</label>
+										<div class="form-input-select form-input-field">
+											<select name="input-select" id="input-select" class="input">
+												<option disabled selected>Choose City</option>
+												<option>Aceh</option>
+												<option>Bali</option>
+												<option>Jakarta</option>
+												<option>Medan</option>
+												<option>Surabaya</option>
+											</select>
+										</div>
+									</div>
+									<h3>Form Input Select (Choice.js)</h3>
+									<div class="form-input js-form-input">
+										<label for="input-ap-vendor" class="form-input-heading">Vendor</label>
+										<div class="form-input-select form-input-field">
+											<select name="input-ap-vendor" id="input-ap-vendor" class="input js-choice">
+												<option>Semua</option>
+												<option>PT Homeco Victoria Makmur</option>
+												<option>PT Supra Teratai Metal</option>
+												<option>PT Trisinar Indopratama</option>
+											</select>
+										</div>
+									</div>
+									<h3>Form Input Table</h3>
+									<div class="form-input js-form-input">
+										<p class="form-input-heading">Stok</p>
+										<div class="form-input-table">
+											<table class="table">
+												<thead>
+													<tr>
+														<th class="th">ID</th>
+														<th class="th">Nama</th>
+														<th class="th">Stok Baru</th>
+														<th class="th">Stok Bekas</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td class="strong">#JC001</td>
+														<td>Jangkau Help Center</td>
+														<td><input class="input" type="text" value="6" placeholder="Jumlah Stok"></td>
+														<td><input class="input" type="text" value="6" placeholder="Jumlah Stok"></td>
+													</tr>
+													<tr>
+														<td class="strong">#JC002</td>
+														<td>Abbalove Center</td>
+														<td><input class="input" type="text" value="4" placeholder="Jumlah Stok"></td>
+														<td><input class="input" type="text" value="4" placeholder="Jumlah Stok"></td>
+													</tr>
+													<tr>
+														<td class="strong">#JC003</td>
+														<td>ICUBIC Center</td>
+														<td><input class="input" type="text" value="8" placeholder="Jumlah Stok"></td>
+														<td><input class="input" type="text" value="8" placeholder="Jumlah Stok"></td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+									<h3>Form Input Phone</h3>
+									<div class="form-input js-form-input">
+										<label for="input-phone" class="form-input-heading">Telepon</label>
+										<div class="form-input-phone form-input-field is-required">
+											<div class="inputs">
+												<input type="tel" id="input-phone-area" class="input input-area" value="+62" placeholder="+62" readonly>
+												<input type="tel" id="input-phone-number" class="input input-number" value="81234889900" placeholder="Enter your phone">
+											</div>
+										</div>
+									</div>
+								</section>
+								<section class="section section-break">
+									<h2>Form File</h2>
+									<h3>Form File</h3>
+									<div class="form-file js-form-file">
+										<label class="form-file-heading">Upload Image</label>
+										<div class="form-file-field">
+											<input type="file" name="input-file" id="input-file" class="input" data-multiple-placeholder="{count} files selected" multiple>
+											<label class="label" for="input-file"><span class="button">Browse files</span> <span class="placeholder">No file selected&hellip;</span> <a href="#" class="remove" title="Remove attachment">&times;</a></label>
+											<p class="caption">Accepted file formats are jpeg, png, gif. Maximum file size is 3 MB.</p>
+										</div>
+									</div>
+									<h3>Form File Image</h3>
+									<div class="form-file js-form-file">
+										<label class="form-file-heading">Upload Image</label>
+										<div class="form-file-image">
+											<div class="form-file-preview">
+												<img class="thumbnail" src="http://placehold.it/320x320/eeeeee/111111">
+												<a href="#" class="remove"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-close" /></svg></a>
+											</div>
+											<div class="form-file-field">
+												<input type="file" name="input-file-2" id="input-file-2" class="input" data-multiple-placeholder="{count} files selected" multiple>
+												<label class="label" for="input-file-2"><span class="button">Browse files</span> <span class="placeholder">No file selected&hellip;</span> <a href="#" class="remove" title="Remove attachment">&times;</a></label>
+												<p class="caption">Accepted file formats are jpeg, png, gif. Maximum file size is 3 MB.</p>
+											</div>
+										</div>
+									</div>
+									<h3>Form File Multiple Image</h3>
+									<div class="form-file js-form-file">
+										<label class="form-file-heading">Upload Image(s)</label>
+										<div class="form-file-image">
+											<div class="form-file-previews">
+												<div class="form-file-preview">
+													<img class="thumbnail" src="http://placehold.it/320x320/eeeeee/111111">
+													<a href="#" class="remove"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-close" /></svg></a>
+												</div>
+												<div class="form-file-preview">
+													<img class="thumbnail" src="http://placehold.it/320x320/eeeeee/111111">
+													<a href="#" class="remove"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-close" /></svg></a>
+												</div>
+											</div>
+											<div class="form-file-field">
+												<input type="file" name="input-file-3" id="input-file-3" class="input" data-multiple-placeholder="{count} files selected" multiple>
+												<label class="label" for="input-file-3"><span class="button">Browse files</span> <span class="placeholder">No file selected&hellip;</span> <a href="#" class="remove" title="Remove attachment">&times;</a></label>
+												<p class="caption">Accepted file formats are jpeg, png, gif. Maximum file size is 3 MB.</p>
+											</div>
+										</div>
+									</div>
+									<h3>Form File Multiple Image with Uploader</h3>
+									<div class="form-file js-form-file">
+										<label class="form-file-heading">Upload Image(s)</label>
+										<div class="form-file-image">
+											<div class="form-file-previews">
+												<div class="form-file-preview">
+													<img class="thumbnail" src="http://placehold.it/320x320/eeeeee/111111">
+													<a href="#" class="remove"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-close" /></svg></a>
+												</div>
+												<div class="form-file-preview">
+													<img class="thumbnail" src="http://placehold.it/320x320/eeeeee/111111">
+													<a href="#" class="remove"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-close" /></svg></a>
+												</div>
+												<div class="form-file-preview">
+													<a href="#popup-media-uploader" class="upload js-popup-inline"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-camera-add" /></svg> Upload</a>
+												</div>
+											</div>
+											<div class="form-file-field">
+												<a href="#popup-media-uploader" class="button js-popup-inline">Browse files</a>
+												<p class="caption">Accepted file formats are jpeg, png, gif. Maximum file size is 3 MB.</p>
+											</div>
+										</div>
+									</div>
+								</section>
+								<section class="section section-break">
+									<h2>Form Uploader</h2>
+									<div class="form-uploader">
+										<div class="form-uploader-head">
+											<h4 class="heading">Media Uploader</h4>
+										</div>
+										<div class="form-uploader-area js-uploader"></div>
+										<div class="form-uploader-loader">
+											<a href="#" class="button button-gray">Load More</a>
+										</div>
+									</div>
+								</section>
+								<section class="section section-break">
+									<h2>Form Repeater</h2>
+									<fieldset class="form-repeater js-form-repeater" data-repeater-max="5">
+										<legend class="form-repeater-heading">Price List</legend>
+										<table class="form-repeater-table">
+											<thead>
+												<tr>
+													<th class="th" width="48px"></th>
+													<th class="th">Location</th>
+													<th class="th">Price (Rp)</th>
+													<th class="th"><a href="#" class="form-repeater-add button" title="Add Row">+</a></th>
+												</tr>
+											</thead>
+											<tbody class="repeaters">
+												<tr class="repeater repeater-source">
+													<td class="handle"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-handle" /></svg></td>
+													<td><input type="text" name="input-location-{timestamp}" data-repeater-id="input-location-{timestamp}" class="input"></td>
+													<td><input type="text" class="input" data-repeater-id="input-price-{timestamp}" data-repeater-name="input-price{timestamp}" placeholder="Rp"></td>
+													<td><a href="#" class="form-repeater-remove button button-gray" title="Delete Row">-</a></td>
+												</tr>
+												<tr class="repeater">
+													<td class="handle"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-handle" /></svg></td>
+													<td>
+														<input type="text" name="input-label-1" data-repeater-id="input-label-1" class="input" value="Toko Sugeng">
+													</td>
+													<td><input type="text" id="input-price-1" class="input" name="input-price-1" placeholder="Rp" value="50.000"></td>
+													<td><a href="#" class="form-repeater-remove button button-gray" title="Delete Row">-</a></td>
+												</tr>
+											</tbody>
+										</table>
+										<p class="form-repeater-alert">Maksimal 5 baris</p>
+									</fieldset>
+								</section>
+							</div>
+							<footer class="admin-page-footer">
+								<p class="attribution">Developed by <a href="http://icubic.co.id" class="link">ICUBIC</a></p>
+							</footer>
+						</div>
+					</main>
+
+					<!-- @import sidebar -->
+
+				</div>
+			</div>
+
+<!-- @import footer -->

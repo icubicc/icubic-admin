@@ -1,0 +1,297 @@
+<!-- @import variables -->
+<!-- $admin-toggle-items-table: toggled -->
+<!-- $admin-nav-table-home: link is-current -->
+<!-- @import header -->
+
+			<div id="site-content" class="site-content">
+				<div class="site-content-inner">
+					<main class="main-content" role="main">
+						<div class="admin-page-container">
+							<header class="admin-page-header">
+								<section class="section section-large">
+									<div class="admin-breadcrumb">
+										<p class="breadcrumb"><span class="parent">Table</span> / <span class="current">Table Components</span></p>
+									</div>
+								</section>
+								<section class="section">
+									<div class="admin-switcher">
+										<div class="admin-switcher-options">
+											<div class="admin-switcher-option">
+												<input type="radio" name="input-admin-language" id="input-admin-language-en" class="input" checked>
+												<label for="input-admin-language-en" class="label">EN</label>
+											</div>
+											<div class="admin-switcher-option">
+												<input type="radio" name="input-admin-language" id="input-admin-language-id" class="input">
+												<label for="input-admin-language-id" class="label">ID</label>
+											</div>
+										</div>
+									</div>
+								</section>
+								<section class="section">
+									<div class="admin-avatar">
+										<div class="admin-avatar-link">
+											<a href="#admin-avatar-menu" class="link js-toggle"><span class="initial">AD</span></a>
+										</div>
+										<div id="admin-avatar-menu" class="admin-avatar-menu">
+											<ul class="items">
+												<li class="item">
+													<a class="link" href="#">Account</a>
+												</li>
+												<li class="item">
+													<a class="link" href="#">Logout</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</section>
+							</header>
+							<div class="admin-page-content">
+								<section class="section section-break">
+									<h2>Table General</h2>
+									<h3>Table General with Search Bar and Page Navigation</h3>
+									<div class="table-general">
+										<div class="table-general-head">
+											<div class="table-general-action">
+												<a href="#" class="button button-green"><svg class="icon icon-inline" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-plus" /></svg> Add New</a>
+											</div>
+											<div class="table-general-search">
+												<div class="search-bar">
+													<div class="search-bar-filter">
+														<a href="#input-search-filter" class="toggle js-toggle" data-toggle-area="#input-search-filter"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-search" /></svg></a>
+														<ul id="input-search-filter" class="items">
+															<li class="item">
+																<label class="label"><input type="checkbox" class="input" checked> Search All</label>
+															</li>
+															<li class="item">
+																<label class="label"><input type="checkbox" class="input"> ID</label>
+															</li>
+															<li class="item">
+																<label class="label"><input type="checkbox" class="input"> Name</label>
+															</li>
+															<li class="item">
+																<label class="label"><input type="checkbox" class="input"> Phone</label>
+															</li>
+															<li class="item">
+																<label class="label"><input type="checkbox" class="input"> Email</label>
+															</li>
+															<li class="item">
+																<label class="label"><input type="checkbox" class="input"> Location</label>
+															</li>
+														</ul>
+													</div>
+													<div class="search-bar-form">
+														<input type="text" class="input" placeholder="Keyword">
+														<button class="button button-gray">Search</button>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="table-general-body">
+											<table class="table">
+												<thead>
+													<tr>
+														<th class="th is-sortable is-active is-asc">ID</th>
+														<th class="th is-sortable">Name</th>
+														<th class="th">Type</th>
+														<th class="th">Phone</th>
+														<th class="th">Email</th>
+														<th class="th is-sortable">
+															<div class="table-general-filter">
+																<a href="#input-table-filter" class="toggle js-toggle" data-toggle-area="#input-table-filter"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-filter" /></svg></a>
+																<ul id="input-table-filter" class="filters">
+																	<li class="filter">
+																		<label class="label"><input type="checkbox" class="input" checked> Show All</label>
+																	</li>
+																	<li class="filter">
+																		<label class="label"><input type="checkbox" class="input"> Jakarta</label>
+																	</li>
+																	<li class="filter">
+																		<label class="label"><input type="checkbox" class="input"> Jayapura</label>
+																	</li>
+																</ul>
+															</div>
+															Location
+														</th>
+														<th class="th"></th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td class="strong">#IN001</td>
+														<td>Budi</td>
+														<td>Individual</td>
+														<td>6221-12346780</td>
+														<td>budi@invi.co</td>
+														<td>Jakarta Barat</td>
+														<td class="action">
+															<a class="more js-toggle" href="#in001">Action</a>
+															<div id="in001" class="table-general-menu">
+																<ul class="items">
+																	<li class="item">
+																		<a href="#" class="link">Edit</a>
+																	</li>
+																	<li class="item">
+																		<a href="#" class="link link-delete">Delete</a>
+																	</li>
+																</ul>
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td class="strong">#IN002</td>
+														<td>Sari</td>
+														<td>Individual</td>
+														<td>6221-12346780</td>
+														<td>sari@invi.co</td>
+														<td>Jakarta Utara</td>
+														<td class="action">
+															<a class="more js-toggle" href="#in002">Action</a>
+															<div id="in002" class="table-general-menu">
+																<ul class="items">
+																	<li class="item">
+																		<a href="#" class="link">Edit</a>
+																	</li>
+																	<li class="item">
+																		<a href="#" class="link link-delete">Delete</a>
+																	</li>
+																</ul>
+															</div>
+														</td>
+													</tr>
+													<tr>
+														<td class="strong">#IN003</td>
+														<td>PT. Sentosa</td>
+														<td>Company</td>
+														<td>6221-12346780</td>
+														<td>sentosa@gmail.com</td>
+														<td>Jakarta Timur</td>
+														<td class="action">
+															<a class="more js-toggle" href="#in003">Action</a>
+															<div id="in003" class="table-general-menu">
+																<ul class="items">
+																	<li class="item">
+																		<a href="#" class="link">Edit</a>
+																	</li>
+																	<li class="item">
+																		<a href="#" class="link link-delete">Delete</a>
+																	</li>
+																</ul>
+															</div>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<div class="table-general-foot">
+											<div class="page-navigation">
+												<div class="page-navigation-record">
+													<p class="count"><span class="value">4</span> records</p>
+												</div>
+												<div class="page-navigation-list">
+													<p class="count"><span class="value">1043</span> pages</p>
+													<ul class="items">
+														<li class="item item-inactive">
+															<a class="link" href="#"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-chevron-double-left" /></svg></a>
+														</li>
+														<li class="item item-inactive">
+															<a class="link" href="#"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-chevron-left" /></svg></a>
+														</li>
+														<li class="item">
+															<input class="input" type="text" value="1">
+														</li>
+														<li class="item">
+															<a class="link" href="#"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-chevron-right" /></svg></a>
+														</li>
+														<li class="item">
+															<a class="link" href="#"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-chevron-double-right" /></svg></a>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+									</div>
+									<h3>Table General Responsive</h3>
+									<div class="table-general table-general-responsive">
+										<div class="table-general-body">
+											<table class="table">
+												<thead>
+													<tr>
+														<th class="th">No</th>
+														<th class="th">Vendor</th>
+														<th class="th">Kategori</th>
+														<th class="th">Total Payment</th>
+														<th class="th">Vendor</th>
+														<th class="th">Kategori</th>
+														<th class="th">Total Payment</th>
+														<th class="th">Vendor</th>
+														<th class="th">Kategori</th>
+														<th class="th">Total Payment</th>
+														<th class="th">Vendor</th>
+														<th class="th">Kategori</th>
+														<th class="th">Total Payment</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr>
+														<td>1</td>
+														<td>PT Trisinar Indopratama</td>
+														<td>Pembelian TSI</td>
+														<td>450.000.000</td>
+														<td>PT Trisinar Indopratama</td>
+														<td>Pembelian TSI</td>
+														<td>450.000.000</td>
+														<td>PT Trisinar Indopratama</td>
+														<td>Pembelian TSI</td>
+														<td>450.000.000</td>
+														<td>PT Trisinar Indopratama</td>
+														<td>Pembelian TSI</td>
+														<td>450.000.000</td>
+													</tr>
+													<tr>
+														<td>2</td>
+														<td>PT Homeco Victoria Makmur</td>
+														<td>Pembelian Medina</td>
+														<td>393.496.825</td>
+														<td>PT Homeco Victoria Makmur</td>
+														<td>Pembelian Medina</td>
+														<td>393.496.825</td>
+														<td>PT Homeco Victoria Makmur</td>
+														<td>Pembelian Medina</td>
+														<td>393.496.825</td>
+														<td>PT Homeco Victoria Makmur</td>
+														<td>Pembelian Medina</td>
+														<td>393.496.825</td>
+													</tr>
+													<tr>
+														<td>3</td>
+														<td>PT Supra Teratai Metal</td>
+														<td>Pembelian Supra</td>
+														<td>371.238.516</td>
+														<td>PT Supra Teratai Metal</td>
+														<td>Pembelian Supra</td>
+														<td>371.238.516</td>
+														<td>PT Supra Teratai Metal</td>
+														<td>Pembelian Supra</td>
+														<td>371.238.516</td>
+														<td>PT Supra Teratai Metal</td>
+														<td>Pembelian Supra</td>
+														<td>371.238.516</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</section>
+							</div>
+							<footer class="admin-page-footer">
+								<p class="attribution">Developed by <a href="http://icubic.co.id" class="link">ICUBIC</a></p>
+							</footer>
+						</div>
+					</main>
+
+					<!-- @import sidebar -->
+
+				</div>
+			</div>
+
+<!-- @import footer -->

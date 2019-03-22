@@ -1,6 +1,6 @@
 <!-- @import variables -->
-<!-- $admin-toggle-items-admin: toggled -->
-<!-- $admin-nav-admin-home: link is-current -->
+<!-- $admin-toggle-items-pop: toggled -->
+<!-- $admin-nav-popup-home: link is-current -->
 <!-- @import header -->
 
 			<div id="site-content" class="site-content">
@@ -10,7 +10,7 @@
 							<header class="admin-page-header">
 								<section class="section section-large">
 									<div class="admin-breadcrumb">
-										<p class="breadcrumb"><span class="parent">Admin Area</span> /  <span class="current">Admin Home</span></p>
+										<p class="breadcrumb"><span class="parent">Popup</span> / <span class="current">Popup Components</span></p>
 									</div>
 								</section>
 								<section class="section">
@@ -46,29 +46,41 @@
 								</section>
 							</header>
 							<div class="admin-page-content">
-								<section class="section section-compact">
-									<div class="page-notification">
-										<p>Hello, welcome to ICUBIC admin area.</p>
+								<section class="section section-break">
+									<h2>Popup Inline</h2>
+									<a href="#popup-media-uploader" class="js-popup-inline">Popup Inline Link</a>
+									<div id="popup-media-uploader" class="popup-inline mfp-hide">
+										<div class="popup-inline-body">
+											<div class="form-uploader">
+												<div class="form-uploader-head">
+													<h4 class="heading">Media Uploader</h4>
+												</div>
+												<div class="form-uploader-area js-uploader"></div>
+												<div class="form-uploader-loader">
+													<a href="#" class="button button-gray">Load More</a>
+												</div>
+											</div>
+										</div>
 									</div>
 								</section>
-								<section class="section">
-									<div class="page-single">
-										<div class="page-single-head">
-											<h1 class="heading">Admin Area</h1>
+								<section class="section section-break">
+									<h2>Popup Modal</h2>
+									<a href="#popup-submit" class="js-popup-modal">Popup Modal Link</a>
+									<div id="popup-submit" class="popup-inline popup-inline-small mfp-hide">
+										<div class="popup-inline-head">
+											<h4 class="heading">Submit Proposal</h4>
 										</div>
-										<div class="page-single-body">
-											<p>Use the left side menu to navigate and browse needed components or layout. Once found, go to the HTML file to grab the markup.</p>
+										<div class="popup-inline-body">
+											<p>Pastikan proposal yang Anda kirim sudah terisi dengan benar. Klik tombol <strong>Submit Proposal</strong> untuk mengirimkan proposal ini.</p>
+										</div>
+										<div class="popup-inline-foot">
+											<div class="form-submit form-submit-right">
+												<button class="button button-gray js-popup-close">Cancel</button>
+												<button class="button">Submit Proposal</button>
+											</div>
 										</div>
 									</div>
 								</section>
-							</div>
-							<div class="admin-page-aside">
-								<div class="admin-widget">
-									<div class="admin-widget-body">
-										<h3>Sticky Notes</h3>
-										<p>You can pin some notes here!</p>
-									</div>
-								</div>
 							</div>
 							<footer class="admin-page-footer">
 								<p class="attribution">Developed by <a href="http://icubic.co.id" class="link">ICUBIC</a></p>

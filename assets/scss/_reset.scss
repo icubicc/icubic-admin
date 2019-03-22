@@ -309,6 +309,19 @@ textarea {
 	}
 }
 
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="url"] {
+
+	&:read-only {
+		background-color: $color-100;
+		border-color: $color-border;
+	}
+}
+
 textarea {
 	height: 128px;
 	resize: none;

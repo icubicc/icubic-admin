@@ -299,7 +299,7 @@
 								});
 								$toggleTarget.classList.remove('is-untoggling');
 								$body.classList.remove(bodyClass+'-is-toggled', bodyClass+'-is-untoggling');
-							}, toggleDuration);
+							}, toggleDuration * 1000);
 							if (toggleAnimation === 'slide') {
 								animate.slideUp($toggleTarget, toggleDuration/2);
 							}
@@ -321,7 +321,7 @@
 							if ($toggleFocus) {
 								$toggleFocus.focus();
 							}
-						}, toggleDuration);
+						}, toggleDuration * 1000);
 
 						if (toggleScrollTarget) {
 							scrollTo(event, $this);
@@ -363,7 +363,7 @@
 					setTimeout(function() {
 						$this.classList.remove('is-untoggling');
 						$toggleTarget.classList.remove('is-untoggling');
-					}, toggleDuration);
+					}, toggleDuration * 1000);
 					if (toggleAnimation === 'slide') {
 						animate.slideUp($toggleTarget, toggleDuration/2);
 					}
@@ -378,7 +378,7 @@
 							$this.classList.remove('is-untoggling');
 							$toggleTarget.classList.remove('is-untoggling');
 							$body.classList.remove(bodyClass+'-is-toggled', bodyClass+'-is-untoggling');
-						}, toggleDuration);
+						}, toggleDuration * 1000);
 						if (toggleAnimation === 'slide') {
 							animate.slideUp($toggleTarget, toggleDuration/2);
 						}
@@ -518,8 +518,14 @@
 			const $fileInput = element.querySelector('.form-file-field'),
 				$input = $fileInput.querySelector('.input'),
 				$label = $fileInput.querySelector('.label'),
-				$remove = $fileInput.querySelector('.remove'),
-				labelDefault = $label.innerHTML;
+				$remove = $fileInput.querySelector('.remove');
+
+			if (!$fileInput || !$input || !$label || !$remove) {
+				return false;
+			}
+
+			const $labelPlaceholder = $label.querySelector('.placeholder'),
+				labelPlaceholderDefault = $labelPlaceholder.innerHTML;
 
 			function addFile($this, event) {
 				let $files = $this.files,
@@ -538,8 +544,7 @@
 				}
 
 				if (fileName) {
-					const $labelCaption = $label.querySelector('.placeholder');
-					$labelCaption.innerHTML = fileName;
+					$labelPlaceholder.innerHTML = fileName;
 					$label.classList.add('has-placeholder');
 				} else {
 					removeFile(event);
@@ -548,7 +553,7 @@
 
 			function removeFile(event) {
 				$input.value = '';
-				$label.innerHTML = labelDefault;
+				$labelPlaceholder.innerHTML = labelPlaceholderDefault;
 				$label.classList.remove('has-placeholder');
 				event.preventDefault();
 			}
@@ -648,15 +653,20 @@
 		}
 
 		function repeaterRemove($button, event) {
-			var $this = $button.closest('.js-form-repeater'),
+			const $this = $button.closest('.js-form-repeater'),
 				$repeater = $this.querySelectorAll('.repeater'),
-				$repeaterAlert = $this.querySelector('.form-repeater-alert'),
-				repeaterCurrent = $repeater.length - 1;
+				$repeaterAlert = $this.querySelector('.form-repeater-alert');
 
-			var parent = $button.closest('.repeater');
+			let repeaterCurrent = $repeater.length - 1;
+
+			const parent = $button.closest('.repeater');
 			parent.remove();
-			$repeaterAlert.style.display = 'none';
 			repeaterCurrent-=1;
+
+			if ($repeaterAlert) {
+				$repeaterAlert.style.display = 'none';
+			}
+
 			event.preventDefault();
 		}
 
