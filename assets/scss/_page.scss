@@ -1,13 +1,7 @@
-.page-single {
+.page-heading {
 
 	@at-root {
-		.page-single-head {
-			margin-bottom: 24px;
-		}
-
-		.page-single-columns {
-			@include flex-flow(800px, 50%, 12px);
-		}
+		.page-heading-title {}
 	}
 }
 

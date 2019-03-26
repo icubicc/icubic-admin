@@ -1,7 +1,8 @@
 .admin-page-container {
 	display: grid;
-	grid-template-rows: auto 1fr auto auto;
+	grid-template-rows: auto auto 1fr auto auto;
 	grid-template-areas:
+		"tool"
 		"head"
 		"body"
 		"side"
@@ -10,20 +11,21 @@
 
 	@include breakpoint(flyer) {
 		grid-template-columns: 1fr 1fr 1fr;
-		grid-template-rows: auto 1fr auto;
+		grid-template-rows: auto auto 1fr auto;
 		grid-template-areas:
+			"tool tool tool tool"
 			"head head head head"
 			"body body body side"
 			"foot foot foot foot";
 	}
 
 	@at-root {
-		.admin-page-header {
+		.admin-page-toolbar {
 			align-items: center;
 			background-color: $white;
 			box-shadow: $box-shadow-300;
 			display: flex;
-			grid-area: head;
+			grid-area: tool;
 			justify-content: space-between;
 			padding: 12px 48px;
 			position: sticky;
@@ -39,9 +41,23 @@
 			}
 		}
 
+		.admin-page-header {
+			grid-area: head;
+			margin-bottom: -16px;
+			padding: 48px 48px 0;
+
+			.section {
+				margin-bottom: 24px;
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+
 		.admin-page-content {
 			grid-area: body;
-			max-width: 1024px;
+			max-width: 1280px;
 			padding: 48px;
 			width: 100%;
 

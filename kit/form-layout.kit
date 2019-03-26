@@ -7,7 +7,7 @@
 				<div class="site-content-inner">
 					<main class="main-content" role="main">
 						<div class="admin-page-container">
-							<header class="admin-page-header">
+							<div class="admin-page-toolbar">
 								<section class="section section-large">
 									<div class="admin-breadcrumb">
 										<p class="breadcrumb"><span class="parent">Form</span> /  <span class="current">Form Layout</span></p>
@@ -44,7 +44,7 @@
 										</div>
 									</div>
 								</section>
-							</header>
+							</div>
 							<div class="admin-page-content">
 								<section class="section section-break">
 									<h2>Form Group</h2>
@@ -107,8 +107,8 @@
 											</div>
 										</div>
 									</fieldset>
-									<h3>Form Fieldset Box</h3>
-									<fieldset class="form-fieldset form-fieldset-box">
+									<h3>Form Fieldset Box and Compact</h3>
+									<fieldset class="form-fieldset form-fieldset-box form-fieldset-compact">
 										<legend class="form-fieldset-legend">User Account</legend>
 										<div class="form-fieldset-rows">
 											<div class="form-fieldset-row">
@@ -141,68 +141,68 @@
 											</div>
 										</div>
 									</fieldset>
-								</section>
-								<section class="section section-break">
-									<h2>Form Compact</h2>
-									<div class="form-compact">
-										<div class="form-compact-item">
-											<div class="form-input js-form-input">
-												<label for="input-ap-month" class="form-input-heading">Bulan Faktur</label>
-												<div class="form-input-select form-input-field">
-													<select name="input-ap-month" id="input-ap-month" class="input">
-														<option>Semua</option>
-													</select>
+									<h3>Form Fieldset Inline</h3>
+									<fieldset class="form-fieldset form-fieldset-inline">
+										<div class="form-fieldset-rows">
+											<div class="form-fieldset-row">
+												<div class="form-input js-form-input">
+													<label for="input-ap-month" class="form-input-heading">Bulan Faktur</label>
+													<div class="form-input-select form-input-field">
+														<select name="input-ap-month" id="input-ap-month" class="input">
+															<option>Semua</option>
+														</select>
+													</div>
+												</div>
+											</div>
+											<div class="form-fieldset-row">
+												<div class="form-input js-form-input">
+													<label for="input-ap-date" class="form-input-heading">Tanggal Faktur</label>
+													<div class="form-input-date form-input-field">
+														<input type="text" id="input-ap-date" class="input" placeholder="Pilih Tanggal">
+													</div>
+												</div>
+											</div>
+											<div class="form-fieldset-row">
+												<div class="form-input js-form-input">
+													<label for="input-ap-date-receive" class="form-input-heading">Tanggal Terima Faktur</label>
+													<div class="form-input-date form-input-field">
+														<input type="text" id="input-ap-date-receive" class="input" placeholder="Pilih Tanggal">
+													</div>
+												</div>
+											</div>
+											<div class="form-fieldset-row">
+												<div class="form-input js-form-input">
+													<label for="input-ap-date-expire" class="form-input-heading">Tanggal Jatuh Tempo</label>
+													<div class="form-input-date form-input-field">
+														<input type="text" id="input-ap-date-expire" class="input" placeholder="Pilih Tanggal">
+													</div>
+												</div>
+											</div>
+											<div class="form-fieldset-row">
+												<div class="form-input js-form-input">
+													<label for="input-ap-vendor" class="form-input-heading">Vendor</label>
+													<div class="form-input-select form-input-field">
+														<select name="input-ap-vendor" id="input-ap-vendor" class="input js-choice">
+															<option>Semua</option>
+															<option>PT Homeco Victoria Makmur</option>
+															<option>PT Supra Teratai Metal</option>
+															<option>PT Trisinar Indopratama</option>
+														</select>
+													</div>
+												</div>
+											</div>
+											<div class="form-fieldset-row">
+												<div class="form-input js-form-input">
+													<label for="input-ap-status" class="form-input-heading">Status Pembayaran</label>
+													<div class="form-input-select form-input-field">
+														<select name="input-ap-status" id="input-ap-status" class="input">
+															<option>Semua</option>
+														</select>
+													</div>
 												</div>
 											</div>
 										</div>
-										<div class="form-compact-item">
-											<div class="form-input js-form-input">
-												<label for="input-ap-date" class="form-input-heading">Tanggal Faktur</label>
-												<div class="form-input-date form-input-field">
-													<input type="text" id="input-ap-date" class="input" placeholder="Pilih Tanggal">
-												</div>
-											</div>
-										</div>
-										<div class="form-compact-item">
-											<div class="form-input js-form-input">
-												<label for="input-ap-date-receive" class="form-input-heading">Tanggal Terima Faktur</label>
-												<div class="form-input-date form-input-field">
-													<input type="text" id="input-ap-date-receive" class="input" placeholder="Pilih Tanggal">
-												</div>
-											</div>
-										</div>
-										<div class="form-compact-item">
-											<div class="form-input js-form-input">
-												<label for="input-ap-date-expire" class="form-input-heading">Tanggal Jatuh Tempo</label>
-												<div class="form-input-date form-input-field">
-													<input type="text" id="input-ap-date-expire" class="input" placeholder="Pilih Tanggal">
-												</div>
-											</div>
-										</div>
-										<div class="form-compact-item">
-											<div class="form-input js-form-input">
-												<label for="input-ap-vendor" class="form-input-heading">Vendor</label>
-												<div class="form-input-select form-input-field">
-													<select name="input-ap-vendor" id="input-ap-vendor" class="input js-choice">
-														<option>Semua</option>
-														<option>PT Homeco Victoria Makmur</option>
-														<option>PT Supra Teratai Metal</option>
-														<option>PT Trisinar Indopratama</option>
-													</select>
-												</div>
-											</div>
-										</div>
-										<div class="form-compact-item">
-											<div class="form-input js-form-input">
-												<label for="input-ap-status" class="form-input-heading">Status Pembayaran</label>
-												<div class="form-input-select form-input-field">
-													<select name="input-ap-status" id="input-ap-status" class="input">
-														<option>Semua</option>
-													</select>
-												</div>
-											</div>
-										</div>
-									</div>
+									</fieldset>
 								</section>
 							</div>
 							<footer class="admin-page-footer">
