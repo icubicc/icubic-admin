@@ -27,7 +27,41 @@ if ($uploader.length) {
 	});
 }
 
+function getRandomColor() {
+  var letters = '0123456789ABCDEF'.split('');
+  var color = '#';
+  for (var i = 0; i < 6; i++ ) {
+    color += letters[Math.floor(Math.random() * 16)];
+	}
+	return color;
+}
+
 jQuery(document).ready(function($) {
+	var url = window.location.href+'chart.json';
+	var request = $.ajax({
+	  url: url,
+	  method: "GET",
+	  dataType: "json"
+	});
+
+	request.done(function( msg ) {
+		var ctx = document.getElementById('myChart');
+		var myChart = new Chart(ctx, {
+		    type: 'bar',
+		    data: {
+		        labels: msg.label,
+		        datasets: [{
+		            label: '# of Color',
+								backgroundColor: getRandomColor(),
+		            data: msg.value,
+		        }]
+		    },
+		});
+	});
+
+	request.fail(function( jqXHR, textStatus ) {
+	  alert( "Request failed: " + textStatus );
+	});
 
 	// initialize magnificPopup
 	var $popupInline = $('.js-popup-inline').magnificPopup({
