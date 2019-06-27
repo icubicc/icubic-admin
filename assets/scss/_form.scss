@@ -298,6 +298,40 @@
 	}
 }
 
+.form-check {
+
+	@at-root {
+		.form-check-fields {
+			border: 1px solid $color-border;
+			max-height: 200px;
+			padding: 8px;
+			overflow-y: auto;
+		}
+
+		.form-check-field {
+			padding-left: 20px;
+			position: relative;
+
+			.input {
+				left: 0;
+				position: absolute;
+				top: 3px;
+
+				&:disabled {
+
+					+ .label {
+						color: $color-text-light;
+					}
+				}
+			}
+
+			.label {
+				display: inline-block;
+			}
+		}
+	}
+}
+
 .form-file {
 
 	.js & {
