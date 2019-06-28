@@ -646,6 +646,10 @@
 				}
 
 				repeaterCurrent+=1;
+
+				// note: ARZ
+				$(document).trigger('repeater-added', [$repeaterNew, repeaterCurrent]);
+
 			} else {
 				$repeaterAlert.style.display = 'block';
 			}
