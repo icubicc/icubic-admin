@@ -78,6 +78,15 @@ jQuery(document).ready(function($) {
 		removalDelay: 200
 	});
 
+	var $popupImage = $('.js-popup-image').magnificPopup({
+		type: 'image',
+		mainClass: 'mfp-animation',
+		removalDelay: 200,
+		image: {
+			verticalFit: true
+		}
+	});
+
 	$(document).on('click', '.js-popup-close', function (event) {
 		event.preventDefault();
 		$.magnificPopup.close();
@@ -89,6 +98,8 @@ jQuery(document).ready(function($) {
 			$popupInline.magnificPopup('open');
 		} else if (event.target && event.target.matches('.js-popup-modal')) {
 			$popupModal.magnificPopup('open');
+		} else if (event.target && event.target.matches('.js-popup-image')) {
+			$popupImage.magnificPopup('open');
 		}
 	});
 
