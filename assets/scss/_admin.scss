@@ -246,6 +246,20 @@
 					background-color: rgba($white, 0.12);
 					font-weight: 700;
 				}
+
+				.count {
+					background-color: $color-alert-500;
+					border-radius: 9px;
+					color: $white;
+					display: inline-block;
+					font-size: $font-size-100;
+					font-weight: 400;
+					line-height: 10px;
+					min-width: 18px;
+					padding: 4px;
+					text-align: center;
+					vertical-align: middle;
+				}
 			}
 		}
 	}
