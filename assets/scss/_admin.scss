@@ -204,7 +204,7 @@
 				font-weight: 400;
 				letter-spacing: 0.08em;
 				margin-bottom: 0;
-				padding: 8px 24px;
+				padding: 8px 36px 8px 24px;
 				position: relative;
 				text-transform: uppercase;
 
@@ -228,11 +228,9 @@
 						content: "";
 						background-color: $color-alert-500;
 						border-radius: 4px;
+						display: inline-block;
 						height: 8px;
 						margin-left: 4px;
-						margin-top: -4px;
-						position: absolute;
-						top: 50%;
 						width: 8px;
 					}
 				}
