@@ -183,6 +183,20 @@
 
 			&.admin-nav-items-child {
 				display: none;
+
+				.admin-nav-items-child {
+
+					.link {
+						padding-left: 40px;
+					}
+
+					.admin-nav-items-child {
+
+						.link {
+							padding-left: 56px;
+						}
+					}
+				}
 			}
 		}
 
@@ -249,8 +263,7 @@
 				padding: 8px 24px;
 				transition: all 0.2s ease-out;
 
-				&:hover,
-				&:focus {
+				&:hover {
 					background-color: rgba($black, 0.2);
 					text-decoration: none;
 				}
@@ -272,6 +285,32 @@
 					padding: 4px;
 					text-align: center;
 					vertical-align: middle;
+				}
+			}
+
+			.toggle {
+				position: relative;
+				padding-right: 40px;
+
+				&:before {
+					content: "";
+					background-color: rgba($white, 0.32);
+					height: 100%;
+					mask-image: url(../images/symbols/icon-chevron-down.svg);
+					mask-repeat: no-repeat;
+					mask-position: right center;
+					mask-size: contain;
+					right: 18px;
+					position: absolute;
+					top: 0;
+					width: 20px;
+				}
+
+				&.is-toggled {
+
+					&:before {
+						mask-image: url(../images/symbols/icon-chevron-up.svg);
+					}
 				}
 			}
 		}
