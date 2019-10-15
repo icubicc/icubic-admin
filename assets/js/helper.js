@@ -59,6 +59,17 @@ function mousePos(event) {
 	};
 }
 
+// convert to camelCase
+function camelCase(str) {
+	return str.toLowerCase()
+		.replace(/[-_]+/g, ' ')
+		.replace(/[^\w\s]/g, '')
+		.replace(/ (.)/g, function($1) {
+			return $1.toUpperCase();
+		})
+		.replace(/ /g, '');
+}
+
 // equalling heights function
 /* EXAMPLE
    equalheight('.floaters .floater');

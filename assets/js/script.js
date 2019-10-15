@@ -2,7 +2,7 @@
 /* This file contains main script for website
  * Style related scripts is located in style.js
  */
-/* global document jQuery Choices */
+/* global document jQuery Chart Choices qq camelCase */
 
 // init Choices
 const $choice = document.querySelectorAll('.js-choice');
@@ -28,42 +28,86 @@ if ($uploader.length) {
 	});
 }
 
-function getRandomColor() {
-	var letters = '0123456789ABCDEF'.split('');
-	var color = '#';
-	for (var i = 0; i < 6; i++ ) {
-		color += letters[Math.floor(Math.random() * 16)];
-	}
-	return color;
-}
+// chart
+const chart = document.querySelectorAll('.js-chart');
+
+const chartColor = [
+	'#ff4d4f',
+	'#ff7a45',
+	'#ffa940',
+	'#ffc53d',
+	'#ffec3d',
+	'#bae637',
+	'#73d13d',
+	'#36cfc9',
+	'#40a9ff',
+	'#597ef7',
+	'#9254de',
+	'#f759ab'
+];
+
+const barScale = {
+	xAxes: [{
+		gridLines: {
+			display: false
+		}
+	}],
+	yAxes: [{
+		ticks: {
+			beginAtZero: true
+		},
+	}]
+};
+
+chart.forEach(el => {
+	const label = [],
+		value = [];
+
+	const elementId = el.id,
+		id = camelCase(elementId);
+
+	fetch(`${id}.json`)
+		.then(blob => blob.json())
+		.then(data => {
+			label.push(...data.label);
+			value.push(...data.value);
+
+			const $id = document.querySelector(`#${elementId}`),
+				type = $id.dataset.chartType || 'doughnut';
+
+			$id.getContext('2d');
+
+			const chartConfig = {
+				type: type,
+				data: {
+					labels: label,
+					datasets: [{
+						backgroundColor: type === 'line' ? '#ff4d4f' : chartColor,
+						borderColor: type === 'line' ? '#ff4d4f' : chartColor,
+						borderWidth: 0,
+						data: value,
+						fill: false
+					}]
+				},
+				options: {
+					legend: {
+						display: type === 'doughnut' ? true : false,
+						position: type === 'doughnut' ? 'right' : 'top',
+						labels: {
+							boxWidth: 11,
+							fontSize: 11
+						}
+					},
+					scales: type === 'bar' ? barScale : 0
+				}
+			};
+
+			new Chart($id, chartConfig);
+		});
+});
+
 
 jQuery(document).ready(function($) {
-	// var url = window.location.href+'chart.json';
-	// var request = $.ajax({
-	//   url: url,
-	//   method: "GET",
-	//   dataType: "json"
-	// });
-
-	// request.done(function( msg ) {
-	// 	var ctx = document.getElementById('myChart');
-	// 	var myChart = new Chart(ctx, {
-	// 	    type: 'bar',
-	// 	    data: {
-	// 	        labels: msg.label,
-	// 	        datasets: [{
-	// 	            label: '# of Color',
-	// 				backgroundColor: getRandomColor(),
-	// 	            data: msg.value,
-	// 	        }]
-	// 	    },
-	// 	});
-	// });
-
-	// request.fail(function( jqXHR, textStatus ) {
-	//   alert( "Request failed: " + textStatus );
-	// });
-
 	// initialize magnificPopup
 	var $popupInline = $('.js-popup-inline').magnificPopup({
 		type: 'inline',

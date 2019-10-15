@@ -1,80 +1,118 @@
 .stat-grid {
 
-	@at-root {
-		.stat-grid-items {
-			@include flex-flow(0px, 256px, 8px);
+	&-items {
+		@include flex-flow(0px, 256px, 8px);
+
+		&:not(:last-child) {
+			margin-bottom: 24px;
+		}
+	}
+
+	&-meta {
+		background-color: $white;
+		border: 1px solid $color-border-light;
+		border-radius: 4px;
+		overflow: hidden;
+		padding: 20px 16px 16px;
+
+		.row {
+			margin-bottom: 0;
 		}
 
-		.stat-grid-item {
-			background-color: $white;
-			border: 1px solid $color-border-light;
-			border-radius: 4px;
-			overflow: hidden;
+		.label {
+			@include font-size-h6;
+			margin-bottom: 2px;
+			text-transform: uppercase;
 		}
 
-		.stat-grid-meta {
-			padding: 20px 16px 16px;
-
-			.row {
-				margin-bottom: 0;
-			}
-
-			.label {
-				@include font-size-h6;
-				margin-bottom: 2px;
-				text-transform: uppercase;
-			}
-
-			.date {
-				@include font-size-400;
-				color: $color-text-light;
-			}
-
-			.value {
-				font-weight: 700;
-			}
+		.date {
+			@include font-size-400;
+			color: $color-text-light;
 		}
 
-		.stat-grid-summary {
+		.value {
+			font-weight: 700;
+		}
+
+		.summary {
+			@include font-size-300;
 			background-color: $color-100;
+			margin: 16px -16px -16px;
 			padding: 8px 16px;
 
-			&.stat-grid-summary-negative {
+			&.negative {
 				background-color: $color-alert-200;
-			}
-
-			&.stat-grid-summary-positive {
-				background-color: $color-success-200;
-			}
-
-			.row {
-				@include font-size-300;
 
 				.icon {
-					fill: $color-text-lighter;
-					height: 20px;
-					width: 20px;
-				}
-
-				.value {
-					font-weight: 700;
+					fill: $color-alert-400;
 				}
 			}
 
-			.positive {
-				color: $color-success-600;
+			&.positive {
+				background-color: $color-success-200;
 
 				.icon {
 					fill: $color-success-400;
 				}
 			}
 
-			.negative {
-				color: $color-alert-600;
+			.icon {
+				fill: $color-text-lighter;
+				height: 20px;
+				width: 20px;
+			}
 
-				.icon {
-					fill: $color-alert-400;
-				}
+			.value {
+				font-weight: 700;
+			}
+		}
+	}
+
+	&-card {
+		background-color: $white;
+		border: 1px solid $color-border-light;
+		border-radius: 4px;
+		overflow: hidden;
+		padding: 20px 16px 16px;
+
+		.title {
+			@include font-size-h6;
+			font-weight: 400;
+			text-transform: uppercase;
+		}
+	}
+}
+
+.stat-head {
+	display: flex;
+	margin-bottom: 32px;
+
+	&-title {
+		font-weight: 300;
+		margin-bottom: 0;
+	}
+
+	&-filter {
+		flex: 0 1 25%;
+		margin-left: auto;
+		padding-left: 32px;
+
+		.input {
+			width: 100%;
+		}
+	}
+}
+
+.stat-report {
+
+	&-table {
+
+		tbody {
+
+			th,
+			td {
+				padding-bottom: 12px;
+				padding-top: 12px;
 			}
 		}
 	}

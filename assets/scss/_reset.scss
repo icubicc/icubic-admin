@@ -388,10 +388,6 @@ table {
 		vertical-align: middle;
 	}
 
-	td {
-		padding: 16px 8px;
-	}
-
 	thead {
 		background-color: $color-100;
 
@@ -417,6 +413,11 @@ table {
 
 		+ tbody {
 			border-top: 2px solid $color-border;
+		}
+
+		th,
+		td {
+			padding: 16px 8px;
 		}
 
 		&:last-child {

@@ -1,0 +1,354 @@
+<!-- @import variables -->
+<!-- $admin-toggle-items-stat: toggled -->
+<!-- $admin-nav-stat-example: link is-current -->
+<!-- $admin-nav-stat-example-dapursolo: link is-current -->
+<!-- @import header -->
+
+			<div id="site-content" class="site-content">
+				<div class="site-content-inner">
+					<main class="main-content" role="main">
+						<div class="admin-page-container">
+							<div class="admin-page-toolbar">
+								<section class="section section-large">
+									<div class="admin-breadcrumb">
+										<p class="breadcrumb"><span class="parent">Stat</span> / <span class="parent">Example</span> / <span class="current">Dapur Solo</span></p>
+									</div>
+								</section>
+								<section class="section">
+									<div class="admin-switcher">
+										<div class="admin-switcher-options">
+											<div class="admin-switcher-option">
+												<input type="radio" name="input-admin-language" id="input-admin-language-en" class="input" checked>
+												<label for="input-admin-language-en" class="label">EN</label>
+											</div>
+											<div class="admin-switcher-option">
+												<input type="radio" name="input-admin-language" id="input-admin-language-id" class="input">
+												<label for="input-admin-language-id" class="label">ID</label>
+											</div>
+										</div>
+									</div>
+								</section>
+								<section class="section">
+									<div class="admin-avatar">
+										<div class="admin-avatar-link">
+											<a href="#admin-avatar-menu" class="link js-toggle"><span class="initial">AD</span></a>
+										</div>
+										<div id="admin-avatar-menu" class="admin-avatar-menu">
+											<ul class="items">
+												<li class="item">
+													<a class="link" href="#">Account</a>
+												</li>
+												<li class="item">
+													<a class="link" href="#">Logout</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</section>
+							</div>
+							<div class="admin-page-content">
+								<section class="section section-head">
+									<div class="stat-head">
+										<h1 class="stat-head-title">Statistics</h1>
+										<div class="stat-head-filter">
+											<select id="input-stat-filter" class="input">
+												<option>2018</option>
+												<option selected>2019</option>
+											</select>
+										</div>
+									</div>
+								</section>
+								<section class="section">
+									<div class="stat-grid">
+										<div class="stat-grid-items">
+											<div class="stat-grid-item">
+												<div class="stat-grid-meta">
+													<p class="row label">Total Revenues</p>
+													<p class="row value">Rp 95.000.000</p>
+													<p class="summary negative"><svg class="icon icon-inline" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-trending-down" /></svg> <span class="value">-Rp 1.000.000</span> from 2018</p>
+												</div>
+											</div>
+											<div class="stat-grid-item">
+												<div class="stat-grid-meta">
+													<p class="row label">Total Transactions</p>
+													<p class="row value">1.028</p>
+													<p class="summary positive"><svg class="icon icon-inline" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-trending-up" /></svg> <span class="value">+102</span> from 2018</p>
+												</div>
+											</div>
+											<div class="stat-grid-item">
+												<div class="stat-grid-meta">
+													<p class="row label">New Customers</p>
+													<p class="row value">928</p>
+													<p class="summary positive"><svg class="icon icon-inline" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-trending-up" /></svg> <span class="value">+208</span> from 2018</p>
+												</div>
+											</div>
+										</div>
+										<div class="stat-grid-items">
+											<div class="stat-grid-item">
+												<div class="stat-grid-card">
+													<h2 class="title">Revenues (Rp)</h2>
+													<div class="chart">
+														<canvas id="chart-revenue-total" class="js-chart" data-chart-type="bar" width="400" height="200"></canvas>
+													</div>
+												</div>
+											</div>
+											<div class="stat-grid-item">
+												<div class="stat-grid-card">
+													<h2 class="title">Transactions</h2>
+													<div class="chart">
+														<canvas id="chart-transaction-total" class="js-chart" data-chart-type="bar" width="400" height="200"></canvas>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="stat-grid-items">
+											<div class="stat-grid-item">
+												<div class="stat-report">
+													<table class="stat-report-table">
+														<thead>
+															<tr>
+																<th class="th is-sortable is-active is-asc">Product</th>
+																<th class="th right is-sortable">JAN</th>
+																<th class="th right is-sortable">FEB</th>
+																<th class="th right is-sortable">MAR</th>
+																<th class="th right is-sortable">APR</th>
+																<th class="th right is-sortable">MAY</th>
+																<th class="th right is-sortable">JUN</th>
+																<th class="th right is-sortable">JUL</th>
+																<th class="th right is-sortable">AUG</th>
+																<th class="th right is-sortable">SEP</th>
+																<th class="th right is-sortable">OCT</th>
+																<th class="th right is-sortable">NOV</th>
+																<th class="th right is-sortable">DEC</th>
+																<th class="th right is-sortable">Total</th>
+															</tr>
+														</thead>
+														<tbody>
+															<tr>
+																<th>Nasi Langgi Telur</th>
+																<td class="right">-</td>
+																<td class="right">1</td>
+																<td class="right">7</td>
+																<td class="right">9</td>
+																<td class="right">12</td>
+																<td class="right">11</td>
+																<td class="right">19</td>
+																<td class="right">20</td>
+																<td class="right">-</td>
+																<td class="right">-</td>
+																<td class="right">-</td>
+																<td class="right">-</td>
+																<td class="right">79</td>
+															</tr>
+															<tr>
+																<th>Nasi Langgi Special</th>
+																<td class="right">-</td>
+																<td class="right">1</td>
+																<td class="right">7</td>
+																<td class="right">9</td>
+																<td class="right">12</td>
+																<td class="right">11</td>
+																<td class="right">19</td>
+																<td class="right">20</td>
+																<td class="right">-</td>
+																<td class="right">-</td>
+																<td class="right">-</td>
+																<td class="right">-</td>
+																<td class="right">79</td>
+															</tr>
+															<tr>
+																<th>Nasi Langgi Komplit</th>
+																<td class="right">-</td>
+																<td class="right">1</td>
+																<td class="right">7</td>
+																<td class="right">9</td>
+																<td class="right">12</td>
+																<td class="right">11</td>
+																<td class="right">19</td>
+																<td class="right">20</td>
+																<td class="right">-</td>
+																<td class="right">-</td>
+																<td class="right">-</td>
+																<td class="right">-</td>
+																<td class="right">79</td>
+															</tr>
+															<tr>
+																<th>Nasi Gudeg Jogja</th>
+																<td class="right">-</td>
+																<td class="right">1</td>
+																<td class="right">7</td>
+																<td class="right">9</td>
+																<td class="right">12</td>
+																<td class="right">11</td>
+																<td class="right">19</td>
+																<td class="right">20</td>
+																<td class="right">-</td>
+																<td class="right">-</td>
+																<td class="right">-</td>
+																<td class="right">-</td>
+																<td class="right">79</td>
+															</tr>
+															<tr>
+																<th>Nasi Urap Komplit</th>
+																<td class="right">-</td>
+																<td class="right">1</td>
+																<td class="right">7</td>
+																<td class="right">9</td>
+																<td class="right">12</td>
+																<td class="right">11</td>
+																<td class="right">19</td>
+																<td class="right">20</td>
+																<td class="right">-</td>
+																<td class="right">-</td>
+																<td class="right">-</td>
+																<td class="right">-</td>
+																<td class="right">79</td>
+															</tr>
+															<tr>
+																<th>Nasi Urap Solo</th>
+																<td class="right">-</td>
+																<td class="right">1</td>
+																<td class="right">7</td>
+																<td class="right">9</td>
+																<td class="right">12</td>
+																<td class="right">11</td>
+																<td class="right">19</td>
+																<td class="right">20</td>
+																<td class="right">-</td>
+																<td class="right">-</td>
+																<td class="right">-</td>
+																<td class="right">-</td>
+																<td class="right">79</td>
+															</tr>
+															<tr>
+																<th>Nasi Laris Ayam</th>
+																<td class="right">-</td>
+																<td class="right">1</td>
+																<td class="right">7</td>
+																<td class="right">9</td>
+																<td class="right">12</td>
+																<td class="right">11</td>
+																<td class="right">19</td>
+																<td class="right">20</td>
+																<td class="right">-</td>
+																<td class="right">-</td>
+																<td class="right">-</td>
+																<td class="right">-</td>
+																<td class="right">79</td>
+															</tr>
+															<tr>
+																<th>Nasi Gudeg Komplit</th>
+																<td class="right">-</td>
+																<td class="right">1</td>
+																<td class="right">7</td>
+																<td class="right">9</td>
+																<td class="right">12</td>
+																<td class="right">11</td>
+																<td class="right">19</td>
+																<td class="right">20</td>
+																<td class="right">-</td>
+																<td class="right">-</td>
+																<td class="right">-</td>
+																<td class="right">-</td>
+																<td class="right">79</td>
+															</tr>
+															<tr>
+																<th>Nasi Ayam Balado</th>
+																<td class="right">-</td>
+																<td class="right">1</td>
+																<td class="right">7</td>
+																<td class="right">9</td>
+																<td class="right">12</td>
+																<td class="right">11</td>
+																<td class="right">19</td>
+																<td class="right">20</td>
+																<td class="right">-</td>
+																<td class="right">-</td>
+																<td class="right">-</td>
+																<td class="right">-</td>
+																<td class="right">79</td>
+															</tr>
+															<tr>
+																<th>Nasi Semur Daging</th>
+																<td class="right">-</td>
+																<td class="right">1</td>
+																<td class="right">7</td>
+																<td class="right">9</td>
+																<td class="right">12</td>
+																<td class="right">11</td>
+																<td class="right">19</td>
+																<td class="right">20</td>
+																<td class="right">-</td>
+																<td class="right">-</td>
+																<td class="right">-</td>
+																<td class="right">-</td>
+																<td class="right">79</td>
+															</tr>
+															<tr>
+																<th>Nasi Semur Ayam</th>
+																<td class="right">-</td>
+																<td class="right">1</td>
+																<td class="right">7</td>
+																<td class="right">9</td>
+																<td class="right">12</td>
+																<td class="right">11</td>
+																<td class="right">19</td>
+																<td class="right">20</td>
+																<td class="right">-</td>
+																<td class="right">-</td>
+																<td class="right">-</td>
+																<td class="right">-</td>
+																<td class="right">79</td>
+															</tr>
+															<tr>
+																<th>Nasi Balado Telur</th>
+																<td class="right">-</td>
+																<td class="right">1</td>
+																<td class="right">7</td>
+																<td class="right">9</td>
+																<td class="right">12</td>
+																<td class="right">11</td>
+																<td class="right">19</td>
+																<td class="right">20</td>
+																<td class="right">-</td>
+																<td class="right">-</td>
+																<td class="right">-</td>
+																<td class="right">-</td>
+																<td class="right">79</td>
+															</tr>
+															<tr>
+																<th>Nasi Semur Telur</th>
+																<td class="right">-</td>
+																<td class="right">1</td>
+																<td class="right">7</td>
+																<td class="right">9</td>
+																<td class="right">12</td>
+																<td class="right">11</td>
+																<td class="right">19</td>
+																<td class="right">20</td>
+																<td class="right">-</td>
+																<td class="right">-</td>
+																<td class="right">-</td>
+																<td class="right">-</td>
+																<td class="right">79</td>
+															</tr>
+														</tbody>
+													</table>
+												</div>
+											</div>
+										</div>
+									</div>
+								</section>
+							</div>
+							<footer class="admin-page-footer">
+								<p class="attribution">Developed by <a href="http://icubic.co.id" class="link">ICUBIC</a></p>
+							</footer>
+						</div>
+					</main>
+
+					<!-- @import sidebar -->
+
+				</div>
+			</div>
+
+<!-- @import footer -->

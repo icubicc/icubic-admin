@@ -64,6 +64,7 @@
 			.section {
 				margin-bottom: 64px;
 
+				&.section-head,
 				&.section-compact {
 					margin-bottom: 32px;
 				}
@@ -271,6 +272,10 @@
 				&.is-current {
 					background-color: rgba($white, 0.12);
 					font-weight: 700;
+
+					+ .admin-nav-items-child {
+						display: block;
+					}
 				}
 
 				.count {
