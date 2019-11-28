@@ -1,0 +1,5 @@
+25.11.19
++ update style.css
++ add assets/js/vendor/flatpickr.min.js
++ update style.js
++ update form-home.html

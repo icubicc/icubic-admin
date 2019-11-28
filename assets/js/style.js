@@ -493,7 +493,17 @@
 				if ($inputDate) {
 					new Pikaday({
 						field: $inputDate.querySelector('.input'),
-						format: 'DD[-]MM[-]YYYY'
+						format: 'Y[-]M[-]D'
+					});
+				}
+
+				// flatpickr support
+				const $inputDateTime = element.querySelector('.form-input-datetime');
+
+				if ($inputDateTime) {
+					flatpickr($inputDateTime.querySelector('.input'), {
+						enableTime: true,
+						dateFormat: "Y-m-d H:i:S",
 					});
 				}
 			});

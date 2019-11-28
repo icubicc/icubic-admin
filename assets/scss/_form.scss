@@ -208,6 +208,28 @@
 			}
 		}
 
+		.form-input-datetime {
+			position: relative;
+
+			&:before {
+				content: "";
+				background-color: $color-500;
+				height: 20px;
+				margin-top: -10px;
+				mask-image: url(../images/symbols/icon-calendar.svg);
+				mask-size: 20px;
+				pointer-events: none;
+				position: absolute;
+				top: 50%;
+				right: 8px;
+				width: 20px;
+			}
+
+			.input {
+				padding-right: 32px;
+			}
+		}
+
 		.form-input-radio {
 			align-items: baseline;
 			display: flex;
