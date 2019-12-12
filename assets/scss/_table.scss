@@ -27,6 +27,17 @@
 			margin-bottom: 24px;
 		}
 
+		.table-general-action {
+			display: flex;
+
+			> * {
+
+				+ * {
+					margin-left: 8px;
+				}
+			}
+		}
+
 		.table-general-legend {
 
 			.heading {
