@@ -655,3 +655,28 @@
 		}
 	}
 }
+
+.form-submit {
+	display: flex;
+	justify-content: space-between;
+
+	&-left,
+	&-right {
+		display: flex;
+
+		.button {
+
+			+ .button {
+				margin-left: 8px;
+			}
+		}
+	}
+
+	&-right {
+		margin-left: auto;
+
+		&:not(:only-child) {
+			margin-left: 32px;
+		}
+	}
+}
