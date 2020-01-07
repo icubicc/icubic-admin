@@ -76,6 +76,21 @@
 		}
 	}
 
+	&.button-dark {
+		background-color: $color-600;
+		color: $white;
+
+		&:hover,
+		&:focus {
+			background-color: $color-800;
+			color: $white;
+		}
+
+		&:active {
+			color: $color-600;
+		}
+	}
+
 	&.button-green {
 		background-color: $color-success-500;
 

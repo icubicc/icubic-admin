@@ -52,6 +52,54 @@
 			max-width: 320px;
 		}
 
+		.table-general-headfilter {
+			flex: 0 1 auto;
+			padding-left: 8px;
+
+			.input {
+				min-width: 128px;
+				width: 100%;
+			}
+
+			.button {
+
+				&.is-toggling,
+				&.is-toggled {
+					background-color: $color-one-500;
+					color: $white;
+				}
+			}
+		}
+
+		.table-general-advfilters {
+			@include font-size-400;
+			background-color: $color-200;
+			border-radius: 4px;
+			display: none;
+			margin-bottom: 24px;
+			margin-top: -16px;
+			padding: 0 4px;
+
+			&.is-toggling,
+			&.is-toggled {
+				display: flex !important;
+			}
+		}
+
+		.table-general-advfilter {
+			flex: 1 1 50%;
+			margin: 8px 4px;
+
+			&.table-general-advfilter-submit {
+				max-width: 160px;
+			}
+
+			.input,
+			.button {
+				width: 100%;
+			}
+		}
+
 		.table-general-filter {
 			display: inline-block;
 
