@@ -119,6 +119,9 @@
 				display: none;
 				list-style: none;
 				margin: 4px 0 0;
+				max-height: 192px;
+				min-width: 128px;
+				overflow-y: auto !important;
 				padding: 4px;
 				position: absolute;
 				left: 0;
@@ -130,6 +133,11 @@
 				.label {
 					display: block;
 					padding: 4px 8px;
+				}
+
+				.input {
+					position: relative;
+					top: -1px;
 				}
 			}
 		}

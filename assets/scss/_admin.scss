@@ -45,6 +45,8 @@
 			grid-area: head;
 			margin-bottom: -16px;
 			padding: 48px 48px 0;
+			position: relative;
+			z-index: 1;
 
 			.section {
 				margin-bottom: 24px;
@@ -56,8 +58,9 @@
 		}
 
 		.admin-page-content {
+			background-color: $white;
 			grid-area: body;
-			max-width: 1280px;
+			max-width: 1126px;
 			padding: 48px;
 			width: 100%;
 
@@ -118,6 +121,7 @@
 		}
 
 		.admin-page-footer {
+			background-color: $white;
 			border-top: 1px solid $color-border;
 			grid-area: foot;
 			padding: 12px 48px;
