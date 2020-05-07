@@ -290,6 +290,10 @@
 					padding: 4px;
 					text-align: center;
 					vertical-align: middle;
+
+					&:empty {
+						min-width: 0;
+					}
 				}
 			}
 
