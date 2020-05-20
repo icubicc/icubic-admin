@@ -1,7 +1,7 @@
 /* This file extends the limit of style.css
  * Style related scripts including polyfill should be written here
  */
-/* global window document history MouseEvent getParameterByName hasChild svg4everybody Stickyfill fluidvids TweenMax ScrollMagic Choices dragula */
+/* global jQuery Pikaday flatpickr getParameterByName hasChild svg4everybody Stickyfill fluidvids TweenMax ScrollMagic Choices dragula */
 
 (function() {
 
@@ -503,7 +503,7 @@
 				if ($inputDateTime) {
 					flatpickr($inputDateTime.querySelector('.input'), {
 						enableTime: true,
-						dateFormat: "Y-m-d H:i:S",
+						dateFormat: 'Y-m-d H:i:S',
 					});
 				}
 			});
@@ -585,17 +585,19 @@
 		var $repeaterForm = document.querySelectorAll('.js-form-repeater');
 
 		function repeaterAdd($button, event) {
-			var $this = $button.closest('.js-form-repeater'),
+			const $this = $button.closest('.form-repeater'),
 				$repeaters = $this.querySelector('.repeaters'),
-				$repeater = $repeaters.querySelectorAll('.repeater'),
+				$repeater = $repeaters.querySelectorAll(':scope > .repeater'),
 				$repeaterSource = $this.querySelector('.repeater-source'),
-				$repeaterAlert = $this.querySelector('.form-repeater-alert'),
-				repeaterMax = $this.dataset.repeaterMax || 99,
-				repeaterCurrent = $repeater.length - 1;
+				$repeaterAlert = $this.querySelector(':scope > .form-repeater-alert'),
+				parentStamp = $this.dataset.repeaterParentstamp,
+				repeaterMax = $this.dataset.repeaterMax || 99;
 
-			function generateID(repeater, type) {
-				var regex = /((?!^)\{.*?\})/,
-					nameSuffix;
+			let repeaterCurrent = $repeater.length - 1;
+
+			function generateID(repeater, type, timestamp) {
+				const regex = /\{(.*?)\}/g;
+				let nameSuffix;
 
 				if (type === 'id') {
 					nameSuffix = repeater.dataset.repeaterId.split(regex);
@@ -603,11 +605,17 @@
 					nameSuffix = repeater.dataset.repeaterName.split(regex);
 				} else if (type === 'for') {
 					nameSuffix = repeater.dataset.repeaterFor.split(regex);
+				} else if (type === 'data-repeater-parentstamp') {
+					nameSuffix = repeater.dataset.repeaterParentstamp.split(regex);
 				}
 
 				nameSuffix.forEach(function(element, n) {
-					if (element === '{timestamp}') {
+					if (element === 'timestamp') {
 						nameSuffix[n] = timestamp;
+					}
+
+					if (element === 'parentstamp') {
+						nameSuffix[n] = parentStamp;
 					}
 				});
 
@@ -616,10 +624,11 @@
 			}
 
 			if (repeaterCurrent < repeaterMax) {
-				var $repeaterNew = $repeaterSource.cloneNode(true),
+				const $repeaterNew = $repeaterSource.cloneNode(true),
 					$repeaterId = $repeaterNew.querySelectorAll('[data-repeater-id]'),
 					$repeaterName = $repeaterNew.querySelectorAll('[data-repeater-name]'),
 					$repeaterFor = $repeaterNew.querySelectorAll('[data-repeater-for]'),
+					$repeaterParentstamp = $repeaterNew.querySelectorAll('[data-repeater-parentstamp]'),
 					timestamp = Date.now();
 
 				$repeaterNew.classList.remove('repeater-source');
@@ -627,19 +636,25 @@
 
 				if ($repeaterId) {
 					$repeaterId.forEach(element => {
-						generateID(element, 'id');
+						generateID(element, 'id', timestamp);
 					});
 				}
 
 				if ($repeaterName) {
 					$repeaterName.forEach(element => {
-						generateID(element, 'name');
+						generateID(element, 'name', timestamp);
 					});
 				}
 
 				if ($repeaterFor) {
 					$repeaterFor.forEach(element => {
-						generateID(element, 'for');
+						generateID(element, 'for', timestamp);
+					});
+				}
+
+				if ($repeaterParentstamp) {
+					$repeaterParentstamp.forEach(element => {
+						generateID(element, 'data-repeater-parentstamp', timestamp);
 					});
 				}
 
@@ -655,27 +670,30 @@
 					});
 				}
 
-				repeaterCurrent+=1;
+				repeaterCurrent = repeaterCurrent + 1;
 
 				// note: ARZ
-				$(document).trigger('repeater-added', [$repeaterNew, repeaterCurrent]);
+				jQuery(document).trigger('repeater-added', [$repeaterNew, repeaterCurrent]);
 
 			} else {
-				$repeaterAlert.style.display = 'block';
+				if ($repeaterAlert) {
+					$repeaterAlert.style.display = 'block';
+				}
 			}
 			event.preventDefault();
 		}
 
 		function repeaterRemove($button, event) {
-			const $this = $button.closest('.js-form-repeater'),
-				$repeater = $this.querySelectorAll('.repeater'),
-				$repeaterAlert = $this.querySelector('.form-repeater-alert');
+			const $this = $button.closest('.form-repeater'),
+				$repeaters = $this.querySelector('.repeaters'),
+				$repeater = $repeaters.querySelectorAll(':scope > .repeater'),
+				$repeaterAlert = $this.querySelector(':scope > .form-repeater-alert');
 
 			let repeaterCurrent = $repeater.length - 1;
 
 			const parent = $button.closest('.repeater');
 			parent.remove();
-			repeaterCurrent-=1;
+			repeaterCurrent = repeaterCurrent - 1;
 
 			if ($repeaterAlert) {
 				$repeaterAlert.style.display = 'none';

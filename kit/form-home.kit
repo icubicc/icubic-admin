@@ -60,7 +60,7 @@
 									<div class="form-input js-form-input">
 										<p class="form-input-heading">Nama Anda <span class="small">Beritahu nama Anda. Yang sebenarnya.</span></p>
 										<div class="form-input-field is-required is-invalid">
-											<input type="text" id="input-name" class="input" value="" placeholder="Masukkan Nama Lengkap" required>
+											<input type="text" id="input-name-2" class="input" value="" placeholder="Masukkan Nama Lengkap" required>
 										</div>
 										<p class="form-input-caption"><span class="alert">Nama Anda harus diisi.</span> Usahakan nama unik agar terdengar unik.</p>
 									</div>
@@ -69,7 +69,7 @@
 										<p class="form-input-heading">Nama Anda <span class="small">Beritahu nama Anda. Yang sebenarnya.</span></p>
 										<div class="form-input-field is-required">
 											<p class="placeholder">Nama Lengkap harus diisi</p>
-											<input type="text" id="input-name" class="input" value="" required>
+											<input type="text" id="input-name-3" class="input" value="" required>
 										</div>
 										<p class="form-input-caption">Usahakan nama unik agar terdengar unik.</p>
 									</div>
@@ -90,16 +90,16 @@
 									</div>
 									<h3>Form Input Text with inline multiple inputs</h3>
 									<div class="form-input js-form-input">
-										<label for="input-product-dimension" class="form-input-heading">Dimension (L&times;W&times;H in cm)</label>
+										<label for="input-product-dimension-2" class="form-input-heading">Dimension (L&times;W&times;H in cm)</label>
 										<div class="form-input-fields form-input-fields-inline">
 											<div class="form-input-field">
-												<input type="text" id="input-product-dimension-length" class="input" placeholder="Length">
+												<input type="text" id="input-product-dimension-2-length" class="input" placeholder="Length">
 											</div>
 											<div class="form-input-field">
-												<input type="text" id="input-product-dimension-width" class="input" placeholder="Width">
+												<input type="text" id="input-product-dimension-2-width" class="input" placeholder="Width">
 											</div>
 											<div class="form-input-field">
-												<input type="text" id="input-product-dimension-height" class="input" placeholder="Height">
+												<input type="text" id="input-product-dimension-2-height" class="input" placeholder="Height">
 											</div>
 										</div>
 									</div>
@@ -367,6 +367,7 @@
 								</section>
 								<section class="section section-break">
 									<h2>Form Repeater</h2>
+									<h3>Form Repeater Basic</h3>
 									<fieldset class="form-repeater js-form-repeater" data-repeater-max="5">
 										<legend class="form-repeater-heading">Price List</legend>
 										<table class="form-repeater-table">
@@ -381,8 +382,8 @@
 											<tbody class="repeaters">
 												<tr class="repeater repeater-source">
 													<td class="handle"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-handle" /></svg></td>
-													<td><input type="text" name="input-location-{timestamp}" data-repeater-id="input-location-{timestamp}" class="input"></td>
-													<td><input type="text" class="input" data-repeater-id="input-price-{timestamp}" data-repeater-name="input-price{timestamp}" placeholder="Rp"></td>
+													<td><input type="text" data-repeater-id="input-label-{timestamp}" data-repeater-name="input-label-{timestamp}" class="input"></td>
+													<td><input type="text" class="input" data-repeater-id="input-price-{timestamp}" data-repeater-name="input-price-{timestamp}" placeholder="Rp"></td>
 													<td><a href="#" class="form-repeater-remove button button-gray" title="Delete Row">-</a></td>
 												</tr>
 												<tr class="repeater">
@@ -391,6 +392,113 @@
 														<input type="text" name="input-label-1" data-repeater-id="input-label-1" class="input" value="Toko Sugeng">
 													</td>
 													<td><input type="text" id="input-price-1" class="input" name="input-price-1" placeholder="Rp" value="50.000"></td>
+													<td><a href="#" class="form-repeater-remove button button-gray" title="Delete Row">-</a></td>
+												</tr>
+											</tbody>
+										</table>
+										<p class="form-repeater-alert">Maksimal 5 baris</p>
+									</fieldset>
+
+									<h3>Form Repeater with Repeater Child</h3>
+									<fieldset class="form-repeater js-form-repeater" data-repeater-max="5">
+										<legend class="form-repeater-heading">Entitlement Checkout</legend>
+										<table class="form-repeater-table">
+											<thead>
+												<tr>
+													<th class="th" width="48px"></th>
+													<th class="th">Product</th>
+													<th class="th"><a href="#" class="form-repeater-add button" title="Add Row">+</a></th>
+												</tr>
+											</thead>
+											<tbody class="repeaters">
+												<tr class="repeater repeater-source">
+													<td class="handle"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-handle" /></svg></td>
+													<td>
+														<input type="text" data-repeater-id="input-product-{timestamp}" data-repeater-name="input-product-{timestamp}" class="input" placeholder="Product Name">
+														<fieldset class="form-repeater" data-repeater-parentstamp="input-product-{timestamp}" data-repeater-max="5">
+															<table class="form-repeater-table">
+																<thead>
+																	<tr>
+																		<th class="th">Variant</th>
+																		<th class="th">Volume (cm)</th>
+																		<th class="th">Weight (kg)</th>
+																		<th class="th"><a href="#" class="form-repeater-add button" title="Add Row">+</a></th>
+																	</tr>
+																</thead>
+																<tbody class="repeaters">
+																	<tr class="repeater repeater-source">
+																		<td>
+																			<input type="text" data-repeater-id="{parentstamp}-variant-{timestamp}" data-repeater-name="{parentstamp}-variant-{timestamp}" class="input">
+																		</td>
+																		<td>
+																			<div class="inputs">
+																				<input type="text" data-repeater-id="{parentstamp}-volumep-{timestamp}" data-repeater-name="{parentstamp}-volumep-{timestamp}" class="input" placeholder="Panjang">
+																				<input type="text" data-repeater-id="{parentstamp}-volumel-{timestamp}" data-repeater-name="{parentstamp}-volumel-{timestamp}" class="input" placeholder="Lebar">
+																				<input type="text" data-repeater-id="{parentstamp}-volumet-{timestamp}" data-repeater-name="{parentstamp}-volumet-{timestamp}" class="input" placeholder="Tinggi">
+																			</div>
+																		</td>
+																		<td>
+																			<input type="text" data-repeater-id="{parentstamp}-price-{timestamp}" data-repeater-name="{parentstamp}-price-{timestamp}" class="input">
+																		</td>
+																		<td><a href="#" class="form-repeater-remove button button-gray" title="Delete Row">-</a></td>
+																	</tr>
+																</tbody>
+															</table>
+															<p class="form-repeater-alert">Maksimal 5 baris</p>
+														</fieldset>
+													</td>
+													<td><a href="#" class="form-repeater-remove button button-gray" title="Delete Row">-</a></td>
+												</tr>
+												<tr class="repeater">
+													<td class="handle"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-handle" /></svg></td>
+													<td>
+														<input type="text" id="input-product-1" name="input-product-1" class="input" value="Dry Fit Jersey" placeholder="Product Name">
+														<fieldset class="form-repeater" data-repeater-parentstamp="input-product-1" data-repeater-max="5">
+															<table class="form-repeater-table">
+																<thead>
+																	<tr>
+																		<th class="th">Variant</th>
+																		<th class="th">Volume (cm)</th>
+																		<th class="th">Weight (kg)</th>
+																		<th class="th"><a href="#" class="form-repeater-add button" title="Add Row">+</a></th>
+																	</tr>
+																</thead>
+																<tbody class="repeaters">
+																	<tr class="repeater repeater-source">
+																		<td>
+																			<input type="text" data-repeater-id="{parentstamp}-variant-{timestamp}" data-repeater-name="{parentstamp}-variant-{timestamp}" class="input">
+																		</td>
+																		<td>
+																			<div class="inputs">
+																				<input type="text" data-repeater-id="{parentstamp}-volumep-{timestamp}" data-repeater-name="{parentstamp}-volumep-{timestamp}" class="input" placeholder="Panjang">
+																				<input type="text" data-repeater-id="{parentstamp}-volumel-{timestamp}" data-repeater-name="{parentstamp}-volumel-{timestamp}" class="input" placeholder="Lebar">
+																				<input type="text" data-repeater-id="{parentstamp}-volumet-{timestamp}" data-repeater-name="{parentstamp}-volumet-{timestamp}" class="input" placeholder="Tinggi">
+																			</div>
+																		</td>
+																		<td>
+																			<input type="text" data-repeater-id="{parentstamp}-weight-{timestamp}" data-repeater-name="{parentstamp}-weight-{timestamp}" class="input">
+																		</td>
+																		<td><a href="#" class="form-repeater-remove button button-gray" title="Delete Row">-</a></td>
+																	</tr>
+																	<tr class="repeater">
+																		<td>
+																			<input type="text" id="input-product-1-variant-1" name="input-product-1-variant-1" class="input" value="S">
+																		</td>
+																		<td>
+																			<div class="inputs">
+																				<input type="text" id="input-product-1-volumep-1" name="input-product-1-volumep-1" class="input" placeholder="Panjang" value="10">
+																				<input type="text" id="input-product-1-volumel-1" name="input-product-1-volumel-1" class="input" placeholder="Lebar" value="80">
+																				<input type="text" id="input-product-1-volumet-1" name="input-product-1-volumet-1" class="input" placeholder="Tinggi" value="40">
+																			</div>
+																		</td>
+																		<td><input type="text" id="input-product-1-weight-1" name="input-product-1-weight-1" class="input" value="1"></td>
+																		<td><a href="#" class="form-repeater-remove button button-gray" title="Delete Row">-</a></td>
+																	</tr>
+																</tbody>
+															</table>
+															<p class="form-repeater-alert">Maksimal 5 baris</p>
+														</fieldset>
+													</td>
 													<td><a href="#" class="form-repeater-remove button button-gray" title="Delete Row">-</a></td>
 												</tr>
 											</tbody>
