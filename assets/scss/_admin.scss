@@ -216,8 +216,8 @@
 
 				&:not(:last-child) {
 					border-bottom: 1px solid rgba($white, 0.12);
-					margin-bottom: 12px;
-					padding-bottom: 12px;
+					margin-bottom: 4px;
+					padding-bottom: 4px;
 				}
 			}
 
@@ -228,7 +228,7 @@
 				font-weight: 400;
 				letter-spacing: 0.08em;
 				margin-bottom: 0;
-				padding: 8px 36px 8px 24px;
+				padding: 13px 36px 13px 24px;
 				position: relative;
 				text-transform: uppercase;
 
@@ -270,7 +270,7 @@
 			.link {
 				// @include font-size-400;
 				display: block;
-				padding: 8px 24px;
+				padding: 10px 24px;
 				transition: all 0.2s ease-out;
 
 				&:hover {
